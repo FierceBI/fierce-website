@@ -1,0 +1,31 @@
+<!--
+  NAV — shared across every page. Edit the menu HERE, once.
+  To rename a link, change the text between the > and </a>.
+  Don't rename the class="..." values — those drive the styling.
+
+  Link targets: Why Fierce, About point to real pages. Programs points to the
+  modules page for now (your future /programs/ hub). Pulse, Resources, Contact,
+  Login and "Talk to our team" are stubs (#) until those pages/forms exist.
+-->
+<header class="nav">
+  <div class="nav__inner">
+    <a class="nav__logo" href="../homepage/">Fierce</a>
+
+    <button class="nav__toggle" aria-label="Open menu"
+            onclick="this.closest('.nav').classList.toggle('is-open')">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav__menu" aria-label="Primary">
+      <a class="nav__link" href="../programs/">Programs</a>
+      <a class="nav__link" href="#">Pulse</a>
+      <a class="nav__link" href="../why-fierce/">Why Fierce</a>
+      <a class="nav__link" href="../resources/">Resources</a>
+      <a class="nav__link" href="../about/">About</a>
+      <a class="nav__link" href="#">Contact</a>
+      <span class="nav__divider"></span>
+      <a class="nav__login" href="#">Login &rarr;</a>
+      <a class="btn btn--primary btn--sm" href="#">Talk to our team</a>
+    </nav>
+  </div>
+</header>
