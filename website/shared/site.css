@@ -324,6 +324,8 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 .methodology__media { display: flex; align-items: center; justify-content: center; height: 500px; }
 .methodology__media img {
     display: block; height: 100%; width: auto; max-width: 100%;   /* transparent PNG, sits on the page */
+    /* drop-shadow follows the book silhouette so they sit on the page, not float */
+    filter: drop-shadow(0 28px 26px rgba(20, 14, 8, 0.30));
 }
 @media (max-width: 880px) {
     .methodology__media { height: auto; }
