@@ -658,6 +658,27 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
     .carousel__arrow { display: none; }   /* swipe on mobile */
 }
 
+/* ---- Learning-format photo cards ("However your people learn best") ------- */
+.learn-card {
+    position: relative;
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    min-height: 380px;
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+}
+/* dark overlay so the title + text stay legible on any photo */
+.learn-card::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(10, 10, 10, 0.30) 0%, rgba(10, 10, 10, 0.55) 45%, rgba(10, 10, 10, 0.88) 100%);
+}
+.learn-card__body { position: relative; z-index: 1; padding: var(--space-7, 28px); }
+.learn-card__title { font-family: var(--font-serif); font-size: var(--text-h3); line-height: 1.1; margin-bottom: var(--space-2); }
+.learn-card__text { color: rgba(255, 255, 255, 0.88); font-size: var(--text-body-small); line-height: var(--leading-normal); }
+
 /* ---- Helpers -------------------------------------------------------------- */
 .lead-in { font-size: var(--text-h4); line-height: var(--leading-medium); color: var(--color-muted); max-width: var(--container-content); }
 .mt-0 { margin-top: 0; }
