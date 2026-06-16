@@ -396,11 +396,12 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 }
 .audience--dark .audience__role::after { display: none; }
 .audience--dark .audience__pain { color: rgba(255, 255, 255, 0.55); }
-.audience--dark .audience__list li { color: rgba(255, 255, 255, 0.8); padding-left: var(--space-5); }
+.audience--dark .audience__list li { color: rgba(255, 255, 255, 0.8); display: flex; gap: var(--space-3); padding-left: 0; }
 .audience--dark .audience__list li::before {
-    content: ''; top: 9px; left: 0;
+    content: ''; position: static; flex-shrink: 0;
     width: 6px; height: 6px; border-radius: 50%;
     background: var(--color-accent);
+    margin-top: 0.6em;   /* aligns the dot with the first line of the text */
 }
 
 /* ---- Lists with check ----------------------------------------------------- */
@@ -533,10 +534,13 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 .proof { display: grid; grid-template-columns: 40% 60%; gap: var(--space-16); align-items: start; }
 @media (max-width: 880px) { .proof { grid-template-columns: 1fr; gap: var(--space-12); } }
 .proof__intro .section__title { max-width: 15ch; }
-.proof__points { display: flex; flex-direction: column; gap: var(--space-16); }
+.proof__points { display: flex; flex-direction: column; }
+.proof-point { padding: var(--space-10) 0; }
+.proof-point:first-child { padding-top: 0; }
+.proof-point + .proof-point { border-top: 1px solid var(--border-default); }
 .proof-point__num {
     font-family: var(--font-serif);
-    font-size: clamp(64px, 9vw, 108px);
+    font-size: clamp(46px, 5vw, 72px);
     line-height: 1;
 }
 .proof-point__arrow { font-size: 0.5em; vertical-align: 0.18em; padding: 0 0.04em; }
