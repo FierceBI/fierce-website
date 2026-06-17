@@ -565,7 +565,7 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 .testimonial__by strong { display: block; color: var(--color-text); font-weight: var(--weight-semibold); }
 
 /* ---- Programs page: thematic tracks of program cards ---------------------- */
-.track + .track { margin-top: var(--space-16); }
+.programs-track { padding: var(--space-16) 0; }
 .track__head {
     display: flex; align-items: baseline; flex-wrap: wrap; gap: var(--space-3) var(--space-6);
     padding-bottom: var(--space-5); margin-bottom: var(--space-8);
@@ -578,9 +578,10 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 .track__desc { font-size: var(--text-body); color: var(--color-muted); }
 .prog-card {
     position: relative; background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.07); border-radius: var(--radius-2xl);
+    border: 1px solid rgba(0, 0, 0, 0.05); border-radius: var(--radius-2xl);
     padding: var(--space-9) var(--space-8) var(--space-8);
     overflow: hidden; height: 100%;
+    box-shadow: 0 16px 34px -24px rgba(40, 25, 10, 0.20);
     transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 240ms ease;
 }
 .prog-card::before {
@@ -636,6 +637,37 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 .offer-card__title { font-family: var(--font-serif); font-size: var(--text-h3); margin-bottom: var(--space-4); }
 .offer-card__text { font-size: var(--text-body); line-height: var(--leading-medium); color: var(--color-muted); margin-bottom: var(--space-8); }
 .offer-card .btn { margin-top: auto; align-self: flex-start; }
+
+/* ---- Fierce for Life membership promo ------------------------------------- */
+.membership { background: linear-gradient(165deg, #FBEDE3 0%, #FAF7F1 62%); }
+.membership__inner {
+    max-width: 840px; margin: 0 auto; text-align: center;
+    display: flex; flex-direction: column; align-items: center;
+}
+.membership__inner .section__title::after { margin-left: auto; margin-right: auto; }
+.membership__tag {
+    font-size: var(--text-micro); font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-widest); text-transform: uppercase;
+    color: var(--color-accent); background: rgba(232, 87, 26, 0.1);
+    padding: 6px 14px; border-radius: var(--radius-full); margin-bottom: var(--space-6);
+}
+.membership__text {
+    font-size: var(--text-h4); line-height: var(--leading-medium);
+    color: var(--color-muted); max-width: 60ch; margin-top: var(--space-3);
+}
+.membership__perks {
+    list-style: none; padding: 0;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-4) var(--space-8);
+    margin: var(--space-9) 0 var(--space-10);
+}
+.membership__perks li {
+    display: flex; align-items: center; gap: var(--space-3);
+    font-size: var(--text-body); color: var(--color-text);
+}
+.membership__perks li::before {
+    content: ''; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--color-accent); flex-shrink: 0;
+}
 
 /* ---- Diagnostic lightbox (frosted glass) ---------------------------------- */
 .lightbox {

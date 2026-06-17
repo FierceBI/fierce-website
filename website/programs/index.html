@@ -32,10 +32,12 @@
         <!-- Program names + descriptions are verbatim from the Fierce one-pager. Accent
              colors match the homepage carousel. To add/remove a program, copy one
              <article class="prog-card"> block and change the name, description, and --accent. -->
-        <section class="section chapter-offwhite programs">
+        <!-- Each track is its own full-width band with a slightly deeper warm tone,
+             so the five sections read as distinct blocks. To restage, change the
+             style="background:#..." on each <section class="programs-track">. -->
+        <section class="section programs-track" style="background: #FAF7F1;">
             <div class="wrap">
-
-                <!-- TRACK 1 -->
+                <!-- TRACK 1 — Start here -->
                 <div class="track">
                     <div class="track__head">
                         <span class="track__label">01 — Start here</span>
@@ -56,8 +58,11 @@
                         </article>
                     </div>
                 </div>
-
-                <!-- TRACK 2 -->
+            </div>
+        </section>
+        <section class="section programs-track" style="background: #F9F1E9;">
+            <div class="wrap">
+                <!-- TRACK 2 — Confront & hold the line -->
                 <div class="track">
                     <div class="track__head">
                         <span class="track__label">02 — Confront &amp; hold the line</span>
@@ -78,8 +83,11 @@
                         </article>
                     </div>
                 </div>
-
-                <!-- TRACK 3 -->
+            </div>
+        </section>
+        <section class="section programs-track" style="background: #F8EBE0;">
+            <div class="wrap">
+                <!-- TRACK 3 — Develop your people -->
                 <div class="track">
                     <div class="track__head">
                         <span class="track__label">03 — Develop your people</span>
@@ -100,8 +108,11 @@
                         </article>
                     </div>
                 </div>
-
-                <!-- TRACK 4 -->
+            </div>
+        </section>
+        <section class="section programs-track" style="background: #F7E5D6;">
+            <div class="wrap">
+                <!-- TRACK 4 — Lead the team -->
                 <div class="track">
                     <div class="track__head">
                         <span class="track__label">04 — Lead the team</span>
@@ -122,8 +133,11 @@
                         </article>
                     </div>
                 </div>
-
-                <!-- TRACK 5 -->
+            </div>
+        </section>
+        <section class="section programs-track" style="background: #F6DFCD;">
+            <div class="wrap">
+                <!-- TRACK 5 — Navigate pressure & change -->
                 <div class="track">
                     <div class="track__head">
                         <span class="track__label">05 — Navigate pressure &amp; change</span>
@@ -145,6 +159,25 @@
                     </div>
                 </div>
 
+            </div>
+        </section>
+
+        <!-- ============ FIERCE FOR LIFE — membership promo ============ -->
+        <!-- ✏️ Membership perks are descriptive placeholders; confirm against
+             fierceinc.com/training/fierce-for-life-membership/ before launch. -->
+        <section class="section membership">
+            <div class="wrap">
+                <div class="membership__inner">
+                    <span class="membership__tag">Membership</span>
+                    <h2 class="section__title">Keep getting fiercer, <span class="gradient-text">for life.</span></h2>
+                    <p class="membership__text">A workshop changes a moment. A membership changes a habit. Fierce for Life gives leaders ongoing access to the method, fresh conversations added over time, and a community practicing together, so the skills stay sharp long after the room clears.</p>
+                    <ul class="membership__perks">
+                        <li>Ongoing access to the Fierce method</li>
+                        <li>New conversations added over time</li>
+                        <li>A community of leaders practicing together</li>
+                    </ul>
+                    <a class="btn btn--primary btn--lg" href="https://fierceinc.com/training/fierce-for-life-membership/">Explore Fierce for Life &rarr;</a>
+                </div>
             </div>
         </section>
 
