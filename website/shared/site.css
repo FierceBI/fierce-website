@@ -566,7 +566,10 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 
 /* ---- Programs page: five tracks, clean B&W cards that reveal color --------- */
 .programs { background: #fff; }
-.track + .track { margin-top: var(--space-20); }
+.track + .track {
+    margin-top: var(--space-16); padding-top: var(--space-16);
+    border-top: 1px solid var(--border-default);
+}
 .track__head { max-width: 640px; margin: 0 auto var(--space-12); text-align: center; }
 .track__title {
     font-family: var(--font-serif); font-size: var(--text-h1);
@@ -581,11 +584,12 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 .track__grid { gap: var(--space-8); }
 
 .prog-card {
-    position: relative; display: flex; flex-direction: column;
+    position: relative; display: flex; flex-direction: column; align-items: center;
+    text-align: center;
     background: #fff; border: 1px solid var(--border-default);
     border-radius: var(--radius-2xl);
-    padding: var(--space-10) var(--space-9) var(--space-9);
-    min-height: 320px; text-decoration: none; color: inherit;
+    padding: var(--space-10) var(--space-8) var(--space-9);
+    min-height: 360px; text-decoration: none; color: inherit;
     transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
                 box-shadow 260ms ease, border-color 260ms ease, background 260ms ease;
 }
@@ -601,12 +605,16 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 }
 .prog-card__desc { font-size: var(--text-body); line-height: var(--leading-medium); color: var(--color-muted); flex: 1; }
 .prog-card__link {
-    margin-top: var(--space-8); font-size: var(--text-body-small);
-    font-weight: var(--weight-semibold); letter-spacing: 0.01em;
-    color: var(--color-muted); transition: color 260ms ease;
+    align-self: center; margin-top: var(--space-8);
+    display: inline-flex; align-items: center; gap: var(--space-2);
+    font-size: var(--text-body-small); font-weight: var(--weight-semibold); letter-spacing: 0.01em;
+    color: var(--color-text); background: transparent;
+    border: 1px solid var(--border-emphasis); border-radius: var(--radius-full);
+    padding: 10px 22px;
+    transition: color 260ms ease, border-color 260ms ease, background 260ms ease;
 }
 .prog-card__arrow { display: inline-block; transition: transform 260ms ease; }
-/* the color reveal */
+/* the color reveal (on hover/focus) */
 .prog-card:hover, .prog-card:focus-visible {
     transform: translateY(-6px);
     border-color: color-mix(in srgb, var(--accent) 45%, var(--border-default));
@@ -616,8 +624,14 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 .prog-card:hover::before, .prog-card:focus-visible::before {
     background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 45%, #fff));
 }
-.prog-card:hover .prog-card__link, .prog-card:focus-visible .prog-card__link { color: var(--accent); }
+.prog-card:hover .prog-card__link, .prog-card:focus-visible .prog-card__link {
+    color: var(--accent); border-color: var(--accent);
+}
 .prog-card:hover .prog-card__arrow, .prog-card:focus-visible .prog-card__arrow { transform: translateX(4px); }
+/* one card per track already shows its color, as a hint that cards are clickable */
+.prog-card--featured { border-color: color-mix(in srgb, var(--accent) 38%, var(--border-default)); background: color-mix(in srgb, var(--accent) 5%, #fff); }
+.prog-card--featured::before { background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 45%, #fff)); }
+.prog-card--featured .prog-card__link { color: var(--accent); border-color: var(--accent); }
 
 /* ---- Diagnostic "find my program" band ------------------------------------ */
 .diag-cta__inner {
@@ -665,7 +679,7 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 .offer-card .btn { margin-top: auto; align-self: flex-start; }
 
 /* ---- Fierce for Life membership promo ------------------------------------- */
-.membership { background: linear-gradient(165deg, #FBEDE3 0%, #FAF7F1 62%); }
+.membership { background: #F4F2EC; }
 .membership__inner {
     max-width: 840px; margin: 0 auto; text-align: center;
     display: flex; flex-direction: column; align-items: center;
