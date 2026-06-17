@@ -584,54 +584,44 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 .track__grid { gap: var(--space-8); }
 
 .prog-card {
-    position: relative; display: flex; flex-direction: column; align-items: center;
-    text-align: center;
+    display: flex; flex-direction: column; align-items: center; text-align: center;
     background: #fff; border: 1px solid var(--border-default);
     border-radius: var(--radius-2xl);
-    padding: var(--space-10) var(--space-8) var(--space-9);
-    min-height: 360px; text-decoration: none; color: inherit;
-    transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
-                box-shadow 260ms ease, border-color 260ms ease, background 260ms ease;
-}
-/* monochrome top bar by default; reveals the accent on hover/focus */
-.prog-card::before {
-    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
-    border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
-    background: #dcdcdc; transition: background 260ms ease;
+    padding: var(--space-10) var(--space-10) var(--space-12);
+    min-height: 340px; text-decoration: none; color: inherit;
+    transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 260ms ease;
 }
 .prog-card__name {
     font-family: var(--font-serif); font-size: var(--text-h2); line-height: 1.1;
     color: var(--color-text); margin-bottom: var(--space-4);
 }
-.prog-card__desc { font-size: var(--text-body); line-height: var(--leading-medium); color: var(--color-muted); flex: 1; }
+/* the only color reveal: the title takes the program's accent (as a gradient) */
+.prog-card--featured .prog-card__name,
+.prog-card:hover .prog-card__name,
+.prog-card:focus-visible .prog-card__name {
+    background: linear-gradient(95deg, var(--accent), color-mix(in srgb, var(--accent) 55%, #fff));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.prog-card__desc {
+    font-size: var(--text-body); line-height: var(--leading-medium); color: var(--color-muted);
+    max-width: 30ch; flex: 1;
+}
 .prog-card__link {
-    align-self: center; margin-top: var(--space-8);
+    margin-top: var(--space-9);
     display: inline-flex; align-items: center; gap: var(--space-2);
     font-size: var(--text-body-small); font-weight: var(--weight-semibold); letter-spacing: 0.01em;
     color: var(--color-text); background: transparent;
     border: 1px solid var(--border-emphasis); border-radius: var(--radius-full);
-    padding: 10px 22px;
-    transition: color 260ms ease, border-color 260ms ease, background 260ms ease;
+    padding: 11px 24px;
+    transition: border-color 200ms ease;
 }
 .prog-card__arrow { display: inline-block; transition: transform 260ms ease; }
-/* the color reveal (on hover/focus) */
 .prog-card:hover, .prog-card:focus-visible {
     transform: translateY(-6px);
-    border-color: color-mix(in srgb, var(--accent) 45%, var(--border-default));
-    background: color-mix(in srgb, var(--accent) 4%, #fff);
     box-shadow: 0 30px 56px -26px rgba(40, 25, 10, 0.30);
 }
-.prog-card:hover::before, .prog-card:focus-visible::before {
-    background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 45%, #fff));
-}
-.prog-card:hover .prog-card__link, .prog-card:focus-visible .prog-card__link {
-    color: var(--accent); border-color: var(--accent);
-}
+.prog-card:hover .prog-card__link, .prog-card:focus-visible .prog-card__link { border-color: var(--color-text); }
 .prog-card:hover .prog-card__arrow, .prog-card:focus-visible .prog-card__arrow { transform: translateX(4px); }
-/* one card per track already shows its color, as a hint that cards are clickable */
-.prog-card--featured { border-color: color-mix(in srgb, var(--accent) 38%, var(--border-default)); background: color-mix(in srgb, var(--accent) 5%, #fff); }
-.prog-card--featured::before { background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 45%, #fff)); }
-.prog-card--featured .prog-card__link { color: var(--accent); border-color: var(--accent); }
 
 /* ---- Diagnostic "find my program" band ------------------------------------ */
 .diag-cta__inner {
