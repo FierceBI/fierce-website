@@ -28,134 +28,140 @@
             </div>
         </section>
 
-        <!-- ============ THE PROGRAMS — organized into five tracks ============ -->
-        <!-- Program names + descriptions are verbatim from the Fierce one-pager. Accent
-             colors match the homepage carousel. To add/remove a program, copy one
-             <article class="prog-card"> block and change the name, description, and --accent. -->
-        <!-- Each track is its own full-width band with a slightly deeper warm tone,
-             so the five sections read as distinct blocks. To restage, change the
-             style="background:#..." on each <section class="programs-track">. -->
-        <section class="section programs-track" style="background: #FAF7F1;">
+        <!-- ============ THE PROGRAMS — five tracks, clean B&W grid ============ -->
+        <!-- Cards are monochrome and reveal their accent color on hover/focus.
+             Names are verbatim minus the "Fierce" prefix. To add/remove a program,
+             copy one <article class="prog-card"> and change the name, copy, and --accent. -->
+        <section class="section programs">
             <div class="wrap">
-                <!-- TRACK 1 — Start here -->
+
+                <!-- TRACK 1 -->
                 <div class="track">
                     <div class="track__head">
-                        <span class="track__label">01 — Start here</span>
-                        <p class="track__desc">The core mindset every other skill builds on.</p>
+                        <span class="eyebrow">Start here</span>
+                        <h2 class="track__title">The core conversations.</h2>
+                        <p class="track__desc">The mindset every other skill builds on.</p>
                     </div>
                     <div class="grid grid--3 track__grid">
-                        <article class="prog-card" style="--accent:#E8571A;">
-                            <h3 class="prog-card__name">Fierce Foundations</h3>
+                        <a class="prog-card" style="--accent:#E8571A;" href="#">
+                            <h3 class="prog-card__name">Foundations</h3>
                             <p class="prog-card__desc">A revolutionary approach to the conversations that matter.</p>
-                        </article>
-                        <article class="prog-card" style="--accent:#4FA878;">
-                            <h3 class="prog-card__name">Fierce Active Listening</h3>
-                            <p class="prog-card__desc">Hear what is said &mdash; and, more importantly, what is not.</p>
-                        </article>
-                        <article class="prog-card" style="--accent:#4FB89F;">
-                            <h3 class="prog-card__name">Fierce Awareness</h3>
-                            <p class="prog-card__desc">Understand the how behind your &mdash; and others&rsquo; &mdash; why.</p>
-                        </article>
+                            <span class="prog-card__link">Explore program <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                        </a>
+                        <a class="prog-card" style="--accent:#4FA878;" href="#">
+                            <h3 class="prog-card__name">Active Listening</h3>
+                            <p class="prog-card__desc">Hear what is said, and, more importantly, what is not.</p>
+                            <span class="prog-card__link">Explore program <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                        </a>
+                        <a class="prog-card" style="--accent:#4FB89F;" href="#">
+                            <h3 class="prog-card__name">Awareness</h3>
+                            <p class="prog-card__desc">Understand the how behind your why, and everyone else's.</p>
+                            <span class="prog-card__link">Explore program <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="section programs-track" style="background: #F9F1E9;">
-            <div class="wrap">
-                <!-- TRACK 2 — Confront & hold the line -->
+
+                <!-- TRACK 2 -->
                 <div class="track">
                     <div class="track__head">
-                        <span class="track__label">02 — Confront &amp; hold the line</span>
-                        <p class="track__desc">Name what&rsquo;s hard, and follow through on it.</p>
+                        <span class="eyebrow">Confront &amp; hold the line</span>
+                        <h2 class="track__title">Name what's hard.</h2>
+                        <p class="track__desc">Say the difficult thing, and follow through on it.</p>
                     </div>
                     <div class="grid grid--3 track__grid">
-                        <article class="prog-card" style="--accent:#C8336B;">
-                            <h3 class="prog-card__name">Fierce Confront</h3>
+                        <a class="prog-card" style="--accent:#C8336B;" href="#">
+                            <h3 class="prog-card__name">Confront</h3>
                             <p class="prog-card__desc">Confront unwanted tension and come face-to-face with the truth.</p>
-                        </article>
-                        <article class="prog-card" style="--accent:#E04E2C;">
-                            <h3 class="prog-card__name">Fierce Accountability</h3>
+                            <span class="prog-card__link">Explore program <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                        </a>
+                        <a class="prog-card" style="--accent:#E04E2C;" href="#">
+                            <h3 class="prog-card__name">Accountability</h3>
                             <p class="prog-card__desc">Drive a culture of ownership where projects complete well and on time.</p>
-                        </article>
-                        <article class="prog-card" style="--accent:#D4A017;">
-                            <h3 class="prog-card__name">Fierce Feedback</h3>
-                            <p class="prog-card__desc">Feedback 365 days a year &mdash; not just at review time.</p>
-                        </article>
+                            <span class="prog-card__link">Explore program <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                        </a>
+                        <a class="prog-card" style="--accent:#D4A017;" href="#">
+                            <h3 class="prog-card__name">Feedback</h3>
+                            <p class="prog-card__desc">Feedback 365 days a year, not just at review time.</p>
+                            <span class="prog-card__link">Explore program <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="section programs-track" style="background: #F8EBE0;">
-            <div class="wrap">
-                <!-- TRACK 3 — Develop your people -->
+
+                <!-- TRACK 3 -->
                 <div class="track">
                     <div class="track__head">
-                        <span class="track__label">03 — Develop your people</span>
-                        <p class="track__desc">Grow capability and leadership through conversation.</p>
+                        <span class="eyebrow">Develop your people</span>
+                        <h2 class="track__title">Grow the people around you.</h2>
+                        <p class="track__desc">Build capability and leadership through conversation.</p>
                     </div>
                     <div class="grid grid--3 track__grid">
-                        <article class="prog-card" style="--accent:#6B4FBB;">
-                            <h3 class="prog-card__name">Fierce Coach</h3>
-                            <p class="prog-card__desc">Get to the heart of the matter &mdash; and act on it &mdash; fast.</p>
-                        </article>
-                        <article class="prog-card" style="--accent:#5BA678;">
-                            <h3 class="prog-card__name">Fierce Delegate</h3>
+                        <a class="prog-card" style="--accent:#6B4FBB;" href="#">
+                            <h3 class="prog-card__name">Coach</h3>
+                            <p class="prog-card__desc">Get to the heart of the matter, and act on it, fast.</p>
+                            <span class="prog-card__link">Explore program <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                        </a>
+                        <a class="prog-card" style="--accent:#5BA678;" href="#">
+                            <h3 class="prog-card__name">Delegate</h3>
                             <p class="prog-card__desc">Be more productive and develop leadership in those around you.</p>
-                        </article>
-                        <article class="prog-card" style="--accent:#3FA078;">
-                            <h3 class="prog-card__name">Fierce Generations</h3>
+                            <span class="prog-card__link">Explore program <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                        </a>
+                        <a class="prog-card" style="--accent:#3FA078;" href="#">
+                            <h3 class="prog-card__name">Generations</h3>
                             <p class="prog-card__desc">Bridge the understanding gap and undo age-related silos.</p>
-                        </article>
+                            <span class="prog-card__link">Explore program <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="section programs-track" style="background: #F7E5D6;">
-            <div class="wrap">
-                <!-- TRACK 4 — Lead the team -->
+
+                <!-- TRACK 4 -->
                 <div class="track">
                     <div class="track__head">
-                        <span class="track__label">04 — Lead the team</span>
-                        <p class="track__desc">Make better decisions together, and move them forward.</p>
+                        <span class="eyebrow">Lead the team</span>
+                        <h2 class="track__title">Move the team forward.</h2>
+                        <p class="track__desc">Make better decisions together, and act on them.</p>
                     </div>
                     <div class="grid grid--3 track__grid">
-                        <article class="prog-card" style="--accent:#F4C430;">
-                            <h3 class="prog-card__name">Fierce Team</h3>
+                        <a class="prog-card" style="--accent:#D98E1F;" href="#">
+                            <h3 class="prog-card__name">Team</h3>
                             <p class="prog-card__desc">Make better, more inclusive decisions using the Beach Ball model.</p>
-                        </article>
-                        <article class="prog-card" style="--accent:#D4567A;">
-                            <h3 class="prog-card__name">Fierce Collaboration</h3>
+                            <span class="prog-card__link">Explore program <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                        </a>
+                        <a class="prog-card" style="--accent:#D4567A;" href="#">
+                            <h3 class="prog-card__name">Collaboration</h3>
                             <p class="prog-card__desc">Create shared ownership for what comes next, together.</p>
-                        </article>
-                        <article class="prog-card" style="--accent:#E07856;">
-                            <h3 class="prog-card__name">Fierce Influence</h3>
+                            <span class="prog-card__link">Explore program <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                        </a>
+                        <a class="prog-card" style="--accent:#E07856;" href="#">
+                            <h3 class="prog-card__name">Influence</h3>
                             <p class="prog-card__desc">Build trust and credibility where no formal authority exists.</p>
-                        </article>
+                            <span class="prog-card__link">Explore program <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                        </a>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="section programs-track" style="background: #F6DFCD;">
-            <div class="wrap">
-                <!-- TRACK 5 — Navigate pressure & change -->
+
+                <!-- TRACK 5 -->
                 <div class="track">
                     <div class="track__head">
-                        <span class="track__label">05 — Navigate pressure &amp; change</span>
-                        <p class="track__desc">Stay grounded, and lead well, when it&rsquo;s hard.</p>
+                        <span class="eyebrow">Navigate pressure &amp; change</span>
+                        <h2 class="track__title">Lead when it's hard.</h2>
+                        <p class="track__desc">Stay grounded, and lead well, under real pressure.</p>
                     </div>
                     <div class="grid grid--3 track__grid">
-                        <article class="prog-card" style="--accent:#2B6FB8;">
-                            <h3 class="prog-card__name">Fierce Resilience</h3>
-                            <p class="prog-card__desc">Empower leaders to take action on life&rsquo;s biggest challenges.</p>
-                        </article>
-                        <article class="prog-card" style="--accent:#3F7CBA;">
-                            <h3 class="prog-card__name">Fierce Change</h3>
-                            <p class="prog-card__desc">Move from resistance to readiness &mdash; from within.</p>
-                        </article>
-                        <article class="prog-card" style="--accent:#D85B8B;">
-                            <h3 class="prog-card__name">Fierce Emotion</h3>
+                        <a class="prog-card" style="--accent:#2B6FB8;" href="#">
+                            <h3 class="prog-card__name">Resilience</h3>
+                            <p class="prog-card__desc">Empower leaders to take action on life's biggest challenges.</p>
+                            <span class="prog-card__link">Explore program <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                        </a>
+                        <a class="prog-card" style="--accent:#3F7CBA;" href="#">
+                            <h3 class="prog-card__name">Change</h3>
+                            <p class="prog-card__desc">Move from resistance to readiness, from within.</p>
+                            <span class="prog-card__link">Explore program <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                        </a>
+                        <a class="prog-card" style="--accent:#D85B8B;" href="#">
+                            <h3 class="prog-card__name">Emotion</h3>
                             <p class="prog-card__desc">Identify emotional patterns and refine your leadership response.</p>
-                        </article>
+                            <span class="prog-card__link">Explore program <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                        </a>
                     </div>
                 </div>
 
@@ -172,9 +178,9 @@
                     <h2 class="section__title">Be Fierce for <span class="gradient-text">Life.</span></h2>
                     <p class="membership__text">A workshop changes a moment. A membership changes a habit. Fierce for Life gives leaders ongoing access to the method, fresh conversations added over time, and a community practicing together, so the skills stay sharp long after the room clears.</p>
                     <ul class="membership__perks">
-                        <li>Ongoing access to the Fierce method</li>
-                        <li>New conversations added over time</li>
-                        <li>A community of leaders practicing together</li>
+                        <li>Ongoing access to the method</li>
+                        <li>New conversations over time</li>
+                        <li>A community of practice</li>
                     </ul>
                     <a class="btn btn--primary btn--lg" href="https://fierceinc.com/training/fierce-for-life-membership/">Explore Fierce for Life &rarr;</a>
                 </div>
@@ -203,23 +209,71 @@
                 </div>
             </div>
 
-            <div class="carousel" data-carousel>
-                <div class="carousel__viewport">
-                    <div class="carousel__track">
-                        <article class="pcard" style="--accent:#E8571A;"><h3 class="pcard__name">In-Person Workshop</h3><p class="pcard__desc">Immersive, facilitated workshops on site with your teams.</p></article>
-                        <article class="pcard" style="--accent:#2B6FB8;"><h3 class="pcard__name">Virtual</h3><p class="pcard__desc">Live, facilitated sessions built for engagement, not lecture.</p></article>
-                        <article class="pcard" style="--accent:#5BA678;"><h3 class="pcard__name">On-Demand Learning</h3><p class="pcard__desc">Self-paced learning your people can take anytime, on any device.</p></article>
-                        <article class="pcard" style="--accent:#6B4FBB;"><h3 class="pcard__name">Pulse</h3><p class="pcard__desc">Biometric data on where conversations land. Built with Korn Ferry.</p></article>
-                        <article class="pcard" style="--accent:#C8336B;"><h3 class="pcard__name">3D Simulations</h3><p class="pcard__desc">Interactive, real-world microlearning where leaders practice the hard moments.</p></article>
-                        <article class="pcard" style="--accent:#D4A017;"><h3 class="pcard__name">Executive Sessions</h3><p class="pcard__desc">A focused strategy session for senior leaders. Real results in as little as two hours.</p></article>
-                        <article class="pcard" style="--accent:#E07856;"><h3 class="pcard__name">Keynote Speaker</h3><p class="pcard__desc">Set the tone for your event with a Fierce conversation on stage.</p></article>
-                        <article class="pcard" style="--accent:#3FA078;"><h3 class="pcard__name">Training Initiative Package</h3><p class="pcard__desc">A large-scale, embedded program for organizations facing far-reaching change.</p></article>
-                        <article class="pcard" style="--accent:#D4567A;"><h3 class="pcard__name">Trainer Certification</h3><p class="pcard__desc">Certify your own facilitators to deliver Fierce and scale it from within.</p></article>
-                    </div>
+                <!-- ✏️ PHOTO CARDS — the first four have images. The five marked
+                     "learn-card--placeholder" need photos: add a real image with
+                     style="background-image: url('../shared/images/learn-XXX.jpg');"
+                     and remove the learn-card--placeholder class + the __ph label. -->
+                <div class="grid grid--3 learn-grid">
+                    <article class="learn-card" style="background-image: url('../shared/images/learn-in-person.jpg');">
+                        <div class="learn-card__body">
+                            <h3 class="learn-card__title gradient-text">In-Person Workshop</h3>
+                            <p class="learn-card__text">Immersive, facilitated workshops on site with your teams.</p>
+                        </div>
+                    </article>
+                    <article class="learn-card" style="background-image: url('../shared/images/learn-virtual.jpg');">
+                        <div class="learn-card__body">
+                            <h3 class="learn-card__title gradient-text">Virtual</h3>
+                            <p class="learn-card__text">Live, facilitated sessions built for engagement, not lecture.</p>
+                        </div>
+                    </article>
+                    <article class="learn-card" style="background-image: url('../shared/images/learn-on-demand.jpg');">
+                        <div class="learn-card__body">
+                            <h3 class="learn-card__title gradient-text">On-Demand Learning</h3>
+                            <p class="learn-card__text">Self-paced learning your people can take anytime, on any device.</p>
+                        </div>
+                    </article>
+                    <article class="learn-card" style="background-image: url('../shared/images/learn-pulse.jpg');">
+                        <div class="learn-card__body">
+                            <h3 class="learn-card__title gradient-text">Pulse</h3>
+                            <p class="learn-card__text">Biometric data on where conversations land. Built with Korn Ferry.</p>
+                        </div>
+                    </article>
+                    <article class="learn-card learn-card--placeholder">
+                        <span class="learn-card__ph">Image coming</span>
+                        <div class="learn-card__body">
+                            <h3 class="learn-card__title gradient-text">3D Simulations</h3>
+                            <p class="learn-card__text">Interactive, real-world microlearning where leaders practice the hard moments.</p>
+                        </div>
+                    </article>
+                    <article class="learn-card learn-card--placeholder">
+                        <span class="learn-card__ph">Image coming</span>
+                        <div class="learn-card__body">
+                            <h3 class="learn-card__title gradient-text">Executive Sessions</h3>
+                            <p class="learn-card__text">A focused strategy session for senior leaders. Real results in as little as two hours.</p>
+                        </div>
+                    </article>
+                    <article class="learn-card learn-card--placeholder">
+                        <span class="learn-card__ph">Image coming</span>
+                        <div class="learn-card__body">
+                            <h3 class="learn-card__title gradient-text">Keynote Speaker</h3>
+                            <p class="learn-card__text">Set the tone for your event with a Fierce conversation on stage.</p>
+                        </div>
+                    </article>
+                    <article class="learn-card learn-card--placeholder">
+                        <span class="learn-card__ph">Image coming</span>
+                        <div class="learn-card__body">
+                            <h3 class="learn-card__title gradient-text">Training Initiative Package</h3>
+                            <p class="learn-card__text">A large-scale, embedded program for organizations facing far-reaching change.</p>
+                        </div>
+                    </article>
+                    <article class="learn-card learn-card--placeholder">
+                        <span class="learn-card__ph">Image coming</span>
+                        <div class="learn-card__body">
+                            <h3 class="learn-card__title gradient-text">Trainer Certification</h3>
+                            <p class="learn-card__text">Certify your own facilitators to deliver Fierce and scale it from within.</p>
+                        </div>
+                    </article>
                 </div>
-                <button class="carousel__arrow carousel__arrow--prev" data-carousel-prev aria-label="Previous format">&larr;</button>
-                <button class="carousel__arrow carousel__arrow--next" data-carousel-next aria-label="Next format">&rarr;</button>
-                <div class="carousel__dots" data-carousel-dots></div>
             </div>
         </section>
 
@@ -269,7 +323,6 @@
     </div>
 
     <script src="../shared/include.js"></script>
-    <script src="../shared/carousel.js"></script>
     <script>
         // Diagnostic lightbox: frosted-glass modal embedding the diagnostic tool.
         (function () {

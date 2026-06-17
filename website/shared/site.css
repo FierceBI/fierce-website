@@ -564,38 +564,60 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 }
 .testimonial__by strong { display: block; color: var(--color-text); font-weight: var(--weight-semibold); }
 
-/* ---- Programs page: thematic tracks of program cards ---------------------- */
-.programs-track { padding: var(--space-16) 0; }
-.track__head {
-    display: flex; align-items: baseline; flex-wrap: wrap; gap: var(--space-3) var(--space-6);
-    padding-bottom: var(--space-5); margin-bottom: var(--space-8);
-    border-bottom: 1px solid var(--border-default);
+/* ---- Programs page: five tracks, clean B&W cards that reveal color --------- */
+.programs { background: #fff; }
+.track + .track { margin-top: var(--space-20); }
+.track__head { max-width: 640px; margin: 0 auto var(--space-12); text-align: center; }
+.track__title {
+    font-family: var(--font-serif); font-size: var(--text-h1);
+    line-height: var(--leading-tight); margin-top: var(--space-2);
 }
-.track__label {
-    font-family: var(--font-serif); font-size: var(--text-h3);
-    letter-spacing: var(--tracking-snug); color: var(--color-text);
+.track__title::after {
+    content: ''; display: block; width: 56px; height: 3px; border-radius: 2px;
+    margin: var(--space-5) auto 0;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
 }
-.track__desc { font-size: var(--text-body); color: var(--color-muted); }
+.track__desc { font-size: var(--text-body); color: var(--color-muted); margin-top: var(--space-4); }
+.track__grid { gap: var(--space-8); }
+
 .prog-card {
-    position: relative; background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.05); border-radius: var(--radius-2xl);
-    padding: var(--space-9) var(--space-8) var(--space-8);
-    overflow: hidden; height: 100%;
-    box-shadow: 0 16px 34px -24px rgba(40, 25, 10, 0.20);
-    transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 240ms ease;
+    position: relative; display: flex; flex-direction: column;
+    background: #fff; border: 1px solid var(--border-default);
+    border-radius: var(--radius-2xl);
+    padding: var(--space-10) var(--space-9) var(--space-9);
+    min-height: 320px; text-decoration: none; color: inherit;
+    transition: transform 260ms cubic-bezier(0.22, 1, 0.36, 1),
+                box-shadow 260ms ease, border-color 260ms ease, background 260ms ease;
 }
+/* monochrome top bar by default; reveals the accent on hover/focus */
 .prog-card::before {
     content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
-    background: linear-gradient(90deg,
-                var(--accent, var(--color-accent)),
-                color-mix(in srgb, var(--accent, var(--color-accent)) 42%, #fff));
+    border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+    background: #dcdcdc; transition: background 260ms ease;
 }
-.prog-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 28px 50px -22px rgba(40, 25, 10, 0.22);
+.prog-card__name {
+    font-family: var(--font-serif); font-size: var(--text-h2); line-height: 1.1;
+    color: var(--color-text); margin-bottom: var(--space-4);
 }
-.prog-card__name { font-family: var(--font-serif); font-size: var(--text-h3); line-height: 1.12; margin-bottom: var(--space-4); }
-.prog-card__desc { font-size: var(--text-body); line-height: var(--leading-medium); color: var(--color-muted); }
+.prog-card__desc { font-size: var(--text-body); line-height: var(--leading-medium); color: var(--color-muted); flex: 1; }
+.prog-card__link {
+    margin-top: var(--space-8); font-size: var(--text-body-small);
+    font-weight: var(--weight-semibold); letter-spacing: 0.01em;
+    color: var(--color-muted); transition: color 260ms ease;
+}
+.prog-card__arrow { display: inline-block; transition: transform 260ms ease; }
+/* the color reveal */
+.prog-card:hover, .prog-card:focus-visible {
+    transform: translateY(-6px);
+    border-color: color-mix(in srgb, var(--accent) 45%, var(--border-default));
+    background: color-mix(in srgb, var(--accent) 4%, #fff);
+    box-shadow: 0 30px 56px -26px rgba(40, 25, 10, 0.30);
+}
+.prog-card:hover::before, .prog-card:focus-visible::before {
+    background: linear-gradient(90deg, var(--accent), color-mix(in srgb, var(--accent) 45%, #fff));
+}
+.prog-card:hover .prog-card__link, .prog-card:focus-visible .prog-card__link { color: var(--accent); }
+.prog-card:hover .prog-card__arrow, .prog-card:focus-visible .prog-card__arrow { transform: translateX(4px); }
 
 /* ---- Diagnostic "find my program" band ------------------------------------ */
 .diag-cta__inner {
@@ -661,15 +683,18 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 }
 .membership__perks {
     list-style: none; padding: 0;
-    width: 100%; max-width: 440px;
+    display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
     margin: var(--space-8) 0 var(--space-10);
 }
 .membership__perks li {
     font-size: var(--text-body); color: var(--color-text);
-    text-align: center; padding: var(--space-4) 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding: var(--space-1) var(--space-6);
 }
-.membership__perks li:first-child { border-top: 0; }
+.membership__perks li + li { border-left: 1px solid rgba(0, 0, 0, 0.14); }
+@media (max-width: 620px) {
+    .membership__perks { flex-direction: column; }
+    .membership__perks li + li { border-left: 0; border-top: 1px solid rgba(0, 0, 0, 0.12); padding-top: var(--space-3); }
+}
 
 /* ---- Diagnostic lightbox (frosted glass) ---------------------------------- */
 .lightbox {
@@ -865,6 +890,15 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 .learn-card__body { position: relative; z-index: 1; padding: var(--space-7, 28px); }
 .learn-card__title { font-family: var(--font-serif); font-size: var(--text-h3); line-height: 1.1; margin-bottom: var(--space-2); }
 .learn-card__text { color: rgba(255, 255, 255, 0.88); font-size: var(--text-body-small); line-height: var(--leading-normal); }
+/* placeholder card (no photo yet) — neutral fill + an "Image coming" chip */
+.learn-card--placeholder { background-image: none; background-color: #b4ada2; background: linear-gradient(150deg, #c4bdb2 0%, #a59e92 100%); }
+.learn-card__ph {
+    position: absolute; top: var(--space-4); left: var(--space-4); z-index: 2;
+    font-size: var(--text-micro); font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-wide); text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.95); background: rgba(0, 0, 0, 0.35);
+    padding: 4px 11px; border-radius: var(--radius-full);
+}
 
 /* ---- Helpers -------------------------------------------------------------- */
 .lead-in { font-size: var(--text-h4); line-height: var(--leading-medium); color: var(--color-muted); max-width: var(--container-content); }
