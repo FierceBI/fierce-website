@@ -21,6 +21,7 @@
 /* Homepage "chapter" backgrounds — direct edges, no gradients */
 .chapter-black { background: radial-gradient(ellipse 70% 55% at 50% 42%, #17120D 0%, #0A0A0A 72%); }
 .chapter-offwhite { background: #FAF7F1; }
+.chapter-white { background: #fff; }
 
 /* Include wrappers create no box, so the injected nav can stay sticky */
 [data-include] { display: contents; }
@@ -80,6 +81,14 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
     line-height: var(--leading-tight);
     letter-spacing: var(--tracking-snug);
 }
+/* gradient accent rule under every editorial section title */
+.section__title::after {
+    content: ''; display: block;
+    width: 56px; height: 3px; border-radius: 2px;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+    margin-top: var(--space-5);
+}
+.section__head--center .section__title::after { margin-left: auto; margin-right: auto; }
 .section__lead {
     font-size: var(--text-h4);
     line-height: var(--leading-medium);
@@ -442,6 +451,9 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 @media (max-width: 760px) { .footer__grid { grid-template-columns: 1fr 1fr; gap: var(--space-8); } }
 .footer__logo { font-family: var(--font-serif); font-size: 28px; text-decoration: none; }
 .footer__tagline { font-size: var(--text-body-small); color: rgba(255, 255, 255, 0.55); margin-top: var(--space-3); max-width: 240px; }
+.footer__social { display: flex; align-items: center; gap: var(--space-4); margin-top: var(--space-6); }
+.footer__social a { color: rgba(255, 255, 255, 0.55); display: inline-flex; transition: color 160ms ease; }
+.footer__social a:hover { color: var(--color-accent); }
 .footer__col h4 { font-size: var(--text-caption); text-transform: uppercase; letter-spacing: var(--tracking-wide); color: #fff; margin-bottom: var(--space-4); }
 .footer__col a { display: block; font-size: var(--text-body-small); color: rgba(255, 255, 255, 0.6); text-decoration: none; padding: var(--space-2) 0; }
 .footer__col a:hover { color: var(--color-accent); }
@@ -517,6 +529,40 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
     color: var(--color-dark-muted-light); max-width: 56ch;
 }
 .preview-cta__inner .btn { margin-top: var(--space-3); }
+
+/* ---- What to expect / process (3 steps -> discovery call) ------------------ */
+.process__steps { margin-top: var(--space-16); }
+.process-step { padding-top: var(--space-6); border-top: 1px solid var(--border-default); }
+.process-step__num {
+    font-family: var(--font-serif); font-size: 40px; line-height: 1;
+    display: block; margin-bottom: var(--space-4);
+}
+.process-step__title { font-family: var(--font-serif); font-size: var(--text-h3); margin-bottom: var(--space-3); }
+.process-step__text { color: var(--color-muted); line-height: var(--leading-medium); }
+.process__cta { margin-top: var(--space-16); }
+.process__cta-note { font-size: var(--text-body-small); color: var(--color-muted); margin-top: var(--space-4); }
+
+/* ---- Testimonials (client voices) ----------------------------------------- */
+.testimonials__grid { margin-top: var(--space-16); }
+.testimonial {
+    background: #fff; border: 1px solid var(--border-default);
+    border-radius: var(--radius-2xl); padding: var(--space-10);
+    display: flex; flex-direction: column; height: 100%;
+    box-shadow: 0 18px 40px -24px rgba(40, 25, 10, 0.18);
+}
+.testimonial__mark {
+    font-family: var(--font-serif); font-size: 56px; line-height: 0.6;
+    color: var(--color-accent); margin-bottom: var(--space-5);
+}
+.testimonial__quote {
+    font-size: var(--text-h4); line-height: var(--leading-medium);
+    color: var(--color-text); margin: 0 0 var(--space-8);
+}
+.testimonial__by {
+    margin-top: auto; font-size: var(--text-body-small);
+    line-height: var(--leading-snug); color: var(--color-muted);
+}
+.testimonial__by strong { display: block; color: var(--color-text); font-weight: var(--weight-semibold); }
 
 /* ---- Diagnostic lightbox (frosted glass) ---------------------------------- */
 .lightbox {
