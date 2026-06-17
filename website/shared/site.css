@@ -564,6 +564,79 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 }
 .testimonial__by strong { display: block; color: var(--color-text); font-weight: var(--weight-semibold); }
 
+/* ---- Programs page: thematic tracks of program cards ---------------------- */
+.track + .track { margin-top: var(--space-16); }
+.track__head {
+    display: flex; align-items: baseline; flex-wrap: wrap; gap: var(--space-3) var(--space-6);
+    padding-bottom: var(--space-5); margin-bottom: var(--space-8);
+    border-bottom: 1px solid var(--border-default);
+}
+.track__label {
+    font-family: var(--font-serif); font-size: var(--text-h3);
+    letter-spacing: var(--tracking-snug); color: var(--color-text);
+}
+.track__desc { font-size: var(--text-body); color: var(--color-muted); }
+.prog-card {
+    position: relative; background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.07); border-radius: var(--radius-2xl);
+    padding: var(--space-9) var(--space-8) var(--space-8);
+    overflow: hidden; height: 100%;
+    transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 240ms ease;
+}
+.prog-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 5px;
+    background: linear-gradient(90deg,
+                var(--accent, var(--color-accent)),
+                color-mix(in srgb, var(--accent, var(--color-accent)) 42%, #fff));
+}
+.prog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 28px 50px -22px rgba(40, 25, 10, 0.22);
+}
+.prog-card__name { font-family: var(--font-serif); font-size: var(--text-h3); line-height: 1.12; margin-bottom: var(--space-4); }
+.prog-card__desc { font-size: var(--text-body); line-height: var(--leading-medium); color: var(--color-muted); }
+
+/* ---- Diagnostic "find my program" band ------------------------------------ */
+.diag-cta__inner {
+    max-width: 720px; margin: 0 auto; text-align: center;
+    display: flex; flex-direction: column; align-items: center; gap: var(--space-5);
+}
+.diag-cta__inner .eyebrow { color: var(--gradient-start); }
+.diag-cta__title { font-family: var(--font-serif); font-size: var(--text-h1); line-height: var(--leading-tight); color: #fff; }
+.diag-cta__text { font-size: var(--text-h4); line-height: var(--leading-medium); color: var(--color-dark-muted-light); max-width: 58ch; }
+.diag-cta__inner .btn { margin-top: var(--space-3); }
+
+/* ---- Ways to experience Fierce (offer cards) ------------------------------ */
+.ways__grid { margin-top: var(--space-16); align-items: stretch; }
+.offer-card {
+    display: flex; flex-direction: column; height: 100%;
+    background: var(--surface-section); border: 1px solid var(--border-default);
+    border-radius: var(--radius-2xl); padding: var(--space-10);
+}
+.offer-card--feature {
+    background: #fff; position: relative;
+    border-color: transparent;
+    box-shadow: 0 26px 50px -20px rgba(40, 25, 10, 0.22);
+}
+.offer-card--feature::before {
+    content: ''; position: absolute; inset: 0; border-radius: var(--radius-2xl);
+    padding: 1.5px; pointer-events: none;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+}
+.offer-card__tag {
+    display: inline-block; align-self: flex-start;
+    font-size: var(--text-micro); font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-wide); text-transform: uppercase;
+    color: var(--color-muted); background: rgba(0, 0, 0, 0.04);
+    padding: 5px 12px; border-radius: var(--radius-full); margin-bottom: var(--space-6);
+}
+.offer-card__tag--accent { color: var(--color-accent); background: rgba(232, 87, 26, 0.1); }
+.offer-card__title { font-family: var(--font-serif); font-size: var(--text-h3); margin-bottom: var(--space-4); }
+.offer-card__text { font-size: var(--text-body); line-height: var(--leading-medium); color: var(--color-muted); margin-bottom: var(--space-8); }
+.offer-card .btn { margin-top: auto; align-self: flex-start; }
+
 /* ---- Diagnostic lightbox (frosted glass) ---------------------------------- */
 .lightbox {
     position: fixed; inset: 0; z-index: 1000;
