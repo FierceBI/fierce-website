@@ -169,7 +169,7 @@
             <div class="wrap">
                 <div class="membership__inner">
                     <span class="membership__tag">Membership</span>
-                    <h2 class="section__title">Keep getting fiercer, <span class="gradient-text">for life.</span></h2>
+                    <h2 class="section__title">Be Fierce for <span class="gradient-text">Life.</span></h2>
                     <p class="membership__text">A workshop changes a moment. A membership changes a habit. Fierce for Life gives leaders ongoing access to the method, fresh conversations added over time, and a community practicing together, so the skills stay sharp long after the room clears.</p>
                     <ul class="membership__perks">
                         <li>Ongoing access to the Fierce method</li>
@@ -193,45 +193,38 @@
             </div>
         </section>
 
-        <!-- ============ HOW WE DELIVER ============ -->
-        <section class="section chapter-offwhite">
+        <!-- ============ HOW WE DELIVER — peeking carousel of formats ============ -->
+        <section class="section chapter-offwhite deliver">
             <div class="wrap">
                 <div class="section__head section__head--center">
                     <span class="eyebrow">How we deliver</span>
                     <h2 class="section__title">However your people learn best.</h2>
-                    <p class="section__lead">Every program runs in the format that fits your teams, or a blend of all of them.</p>
+                    <p class="section__lead">Every program runs in the format that fits your teams, on site, online, self-paced, or a blend of all of them.</p>
                 </div>
-                <div class="grid grid--4 learn-grid">
-                    <article class="learn-card" style="background-image: url('../shared/images/learn-in-person.jpg');">
-                        <div class="learn-card__body">
-                            <h3 class="learn-card__title gradient-text">In-Person</h3>
-                            <p class="learn-card__text">Immersive, facilitated workshops on site with your teams.</p>
-                        </div>
-                    </article>
-                    <article class="learn-card" style="background-image: url('../shared/images/learn-virtual.jpg');">
-                        <div class="learn-card__body">
-                            <h3 class="learn-card__title gradient-text">Virtual</h3>
-                            <p class="learn-card__text">Live, facilitated sessions designed for engagement, not lecture.</p>
-                        </div>
-                    </article>
-                    <article class="learn-card" style="background-image: url('../shared/images/learn-on-demand.jpg');">
-                        <div class="learn-card__body">
-                            <h3 class="learn-card__title gradient-text">On-Demand</h3>
-                            <p class="learn-card__text">Self-paced learning your people can take anytime, on any device.</p>
-                        </div>
-                    </article>
-                    <article class="learn-card" style="background-image: url('../shared/images/learn-pulse.jpg');">
-                        <div class="learn-card__body">
-                            <h3 class="learn-card__title gradient-text">Pulse</h3>
-                            <p class="learn-card__text">Biometric data on where conversations land. Built with Korn Ferry.</p>
-                        </div>
-                    </article>
+            </div>
+
+            <div class="carousel" data-carousel>
+                <div class="carousel__viewport">
+                    <div class="carousel__track">
+                        <article class="pcard" style="--accent:#E8571A;"><h3 class="pcard__name">In-Person Workshop</h3><p class="pcard__desc">Immersive, facilitated workshops on site with your teams.</p></article>
+                        <article class="pcard" style="--accent:#2B6FB8;"><h3 class="pcard__name">Virtual</h3><p class="pcard__desc">Live, facilitated sessions built for engagement, not lecture.</p></article>
+                        <article class="pcard" style="--accent:#5BA678;"><h3 class="pcard__name">On-Demand Learning</h3><p class="pcard__desc">Self-paced learning your people can take anytime, on any device.</p></article>
+                        <article class="pcard" style="--accent:#6B4FBB;"><h3 class="pcard__name">Pulse</h3><p class="pcard__desc">Biometric data on where conversations land. Built with Korn Ferry.</p></article>
+                        <article class="pcard" style="--accent:#C8336B;"><h3 class="pcard__name">3D Simulations</h3><p class="pcard__desc">Interactive, real-world microlearning where leaders practice the hard moments.</p></article>
+                        <article class="pcard" style="--accent:#D4A017;"><h3 class="pcard__name">Executive Sessions</h3><p class="pcard__desc">A focused strategy session for senior leaders. Real results in as little as two hours.</p></article>
+                        <article class="pcard" style="--accent:#E07856;"><h3 class="pcard__name">Keynote Speaker</h3><p class="pcard__desc">Set the tone for your event with a Fierce conversation on stage.</p></article>
+                        <article class="pcard" style="--accent:#3FA078;"><h3 class="pcard__name">Training Initiative Package</h3><p class="pcard__desc">A large-scale, embedded program for organizations facing far-reaching change.</p></article>
+                        <article class="pcard" style="--accent:#D4567A;"><h3 class="pcard__name">Trainer Certification</h3><p class="pcard__desc">Certify your own facilitators to deliver Fierce and scale it from within.</p></article>
+                    </div>
                 </div>
+                <button class="carousel__arrow carousel__arrow--prev" data-carousel-prev aria-label="Previous format">&larr;</button>
+                <button class="carousel__arrow carousel__arrow--next" data-carousel-next aria-label="Next format">&rarr;</button>
+                <div class="carousel__dots" data-carousel-dots></div>
             </div>
         </section>
 
         <!-- ============ WAYS TO EXPERIENCE FIERCE (LL · FLS · Discovery) ============ -->
-        <section class="section chapter-white ways">
+        <section class="section chapter-black section--dark ways">
             <div class="wrap">
                 <div class="section__head section__head--center">
                     <span class="eyebrow">Ways to experience Fierce</span>
@@ -276,6 +269,7 @@
     </div>
 
     <script src="../shared/include.js"></script>
+    <script src="../shared/carousel.js"></script>
     <script>
         // Diagnostic lightbox: frosted-glass modal embedding the diagnostic tool.
         (function () {

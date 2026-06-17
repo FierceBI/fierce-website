@@ -608,34 +608,38 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 .diag-cta__inner .btn { margin-top: var(--space-3); }
 
 /* ---- Ways to experience Fierce (offer cards) ------------------------------ */
+.ways .section__title { color: #fff; }
 .ways__grid { margin-top: var(--space-16); align-items: stretch; }
 .offer-card {
+    position: relative;
     display: flex; flex-direction: column; height: 100%;
-    background: var(--surface-section); border: 1px solid var(--border-default);
+    background: rgba(255, 255, 255, 0.03);
     border-radius: var(--radius-2xl); padding: var(--space-10);
 }
-.offer-card--feature {
-    background: #fff; position: relative;
-    border-color: transparent;
-    box-shadow: 0 26px 50px -20px rgba(40, 25, 10, 0.22);
-}
-.offer-card--feature::before {
+/* orange gradient outline on every card */
+.offer-card::before {
     content: ''; position: absolute; inset: 0; border-radius: var(--radius-2xl);
     padding: 1.5px; pointer-events: none;
     background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor; mask-composite: exclude;
 }
+/* Leadership Labs — the highlighted card */
+.offer-card--feature {
+    background: rgba(255, 255, 255, 0.07);
+    box-shadow: 0 30px 60px -22px rgba(232, 87, 26, 0.40);
+}
+.offer-card--feature::before { padding: 2.5px; }
 .offer-card__tag {
     display: inline-block; align-self: flex-start;
     font-size: var(--text-micro); font-weight: var(--weight-semibold);
     letter-spacing: var(--tracking-wide); text-transform: uppercase;
-    color: var(--color-muted); background: rgba(0, 0, 0, 0.04);
+    color: rgba(255, 255, 255, 0.7); background: rgba(255, 255, 255, 0.08);
     padding: 5px 12px; border-radius: var(--radius-full); margin-bottom: var(--space-6);
 }
-.offer-card__tag--accent { color: var(--color-accent); background: rgba(232, 87, 26, 0.1); }
-.offer-card__title { font-family: var(--font-serif); font-size: var(--text-h3); margin-bottom: var(--space-4); }
-.offer-card__text { font-size: var(--text-body); line-height: var(--leading-medium); color: var(--color-muted); margin-bottom: var(--space-8); }
+.offer-card__tag--accent { color: var(--color-accent); background: rgba(232, 87, 26, 0.16); }
+.offer-card__title { font-family: var(--font-serif); font-size: var(--text-h3); margin-bottom: var(--space-4); color: #fff; }
+.offer-card__text { font-size: var(--text-body); line-height: var(--leading-medium); color: var(--color-dark-muted-light); margin-bottom: var(--space-8); }
 .offer-card .btn { margin-top: auto; align-self: flex-start; }
 
 /* ---- Fierce for Life membership promo ------------------------------------- */
@@ -657,17 +661,15 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 }
 .membership__perks {
     list-style: none; padding: 0;
-    display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-4) var(--space-8);
-    margin: var(--space-9) 0 var(--space-10);
+    width: 100%; max-width: 440px;
+    margin: var(--space-8) 0 var(--space-10);
 }
 .membership__perks li {
-    display: flex; align-items: center; gap: var(--space-3);
     font-size: var(--text-body); color: var(--color-text);
+    text-align: center; padding: var(--space-4) 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-.membership__perks li::before {
-    content: ''; width: 7px; height: 7px; border-radius: 50%;
-    background: var(--color-accent); flex-shrink: 0;
-}
+.membership__perks li:first-child { border-top: 0; }
 
 /* ---- Diagnostic lightbox (frosted glass) ---------------------------------- */
 .lightbox {
