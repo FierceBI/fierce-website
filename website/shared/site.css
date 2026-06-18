@@ -440,6 +440,8 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
     padding: var(--space-20) var(--space-10);
     display: flex; flex-direction: column; align-items: center; text-align: center; gap: var(--space-6);
 }
+/* pages that already end on their own closing CTA opt out of the shared footer CTA */
+body.no-footer-cta .footer__cta { display: none; }
 .footer__cta-text { max-width: 640px; }
 .footer__cta-text h2 { font-family: var(--font-serif); font-size: var(--text-h2); line-height: var(--leading-snug); }
 .footer__cta-text p { color: var(--color-muted); margin-top: var(--space-3); }
@@ -454,7 +456,13 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 .footer__social { display: flex; align-items: center; gap: var(--space-4); margin-top: var(--space-6); }
 .footer__social a { color: rgba(255, 255, 255, 0.55); display: inline-flex; transition: color 160ms ease; }
 .footer__social a:hover { color: var(--color-accent); }
-.footer__col h4 { font-size: var(--text-caption); text-transform: uppercase; letter-spacing: var(--tracking-wide); color: #fff; margin-bottom: var(--space-4); }
+.footer__col h4 { position: relative; font-size: var(--text-caption); text-transform: uppercase; letter-spacing: var(--tracking-wide); color: #fff; padding-bottom: var(--space-3); margin-bottom: var(--space-4); }
+/* accent gradient line under each footer column title */
+.footer__col h4::after {
+    content: ''; position: absolute; left: 0; bottom: 0;
+    width: 28px; height: 2px; border-radius: 2px;
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
+}
 .footer__col a { display: block; font-size: var(--text-body-small); color: rgba(255, 255, 255, 0.6); text-decoration: none; padding: var(--space-2) 0; }
 .footer__col a:hover { color: var(--color-accent); }
 .footer__bar {
@@ -592,11 +600,11 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
     font-family: var(--font-serif); font-size: var(--text-h2); line-height: 1.1;
     color: var(--color-text); margin-bottom: var(--space-4);
 }
-/* the only color reveal: the title takes the program's accent (as a gradient) */
+/* the only color reveal: the title takes the brand orange gradient (consistent across every card) */
 .prog-card--featured .prog-card__name,
 .prog-card:hover .prog-card__name,
 .prog-card:focus-visible .prog-card__name {
-    background: linear-gradient(95deg, var(--accent), color-mix(in srgb, var(--accent) 55%, #fff));
+    background: linear-gradient(90deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end));
     -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
 }
 .prog-card__desc {
@@ -629,6 +637,11 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 .diag-cta__title { font-family: var(--font-serif); font-size: var(--text-h1); line-height: var(--leading-tight); color: #fff; }
 .diag-cta__text { font-size: var(--text-h4); line-height: var(--leading-medium); color: var(--color-dark-muted-light); max-width: 58ch; }
 .diag-cta__inner .btn { margin-top: var(--space-3); }
+/* two-button action row in the closing CTA (Find my program + Talk to our team) */
+.diag-cta__actions { display: flex; flex-wrap: wrap; gap: var(--space-4); justify-content: center; margin-top: var(--space-3); }
+.diag-cta__actions .btn { margin-top: 0; }
+.diag-cta .btn--ghost { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.3); }
+.diag-cta .btn--ghost:hover { border-color: #fff; }
 
 /* ---- Ways to experience Fierce (offer cards) ------------------------------ */
 .ways .section__title { color: #fff; }
@@ -901,7 +914,7 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
     padding: 4px 11px; border-radius: var(--radius-full);
 }
 /* slightly smaller delivery cards on the programs page */
-.deliver .learn-card { min-height: 320px; }
+.deliver .learn-card { min-height: 270px; }
 
 /* ---- Helpers -------------------------------------------------------------- */
 .lead-in { font-size: var(--text-h4); line-height: var(--leading-medium); color: var(--color-muted); max-width: var(--container-content); }
