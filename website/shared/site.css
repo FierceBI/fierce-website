@@ -351,23 +351,18 @@ h1, h2, h3, .serif { font-family: var(--font-serif); font-weight: var(--weight-r
 .device__play:hover .device__playbtn, .device__play:focus-visible .device__playbtn { transform: scale(1.08); }
 .device__playbtn svg { width: 28px; height: 28px; fill: #fff; margin-left: 3px; }
 
-/* ---- Phone variant + stylized Pulse app mock (placeholder for a real screenshot) ---- */
-.device--phone {
-    position: relative; max-width: 300px; margin: 0 auto;
-    background: linear-gradient(160deg, #2c2c30 0%, #161618 100%);
-    border-radius: 42px; padding: 13px;
-    box-shadow: 0 34px 80px -34px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-}
-.device--phone::before {                      /* notch */
-    content: ''; position: absolute; top: 13px; left: 50%; transform: translateX(-50%);
-    width: 40%; height: 20px; border-radius: 0 0 14px 14px; background: #0b0b0d; z-index: 2;
-}
-.device--phone .device__screen { border-radius: 30px; }
-.section--dark .device--phone { box-shadow: 0 0 90px -18px rgba(235, 117, 37, 0.40), 0 34px 80px -34px rgba(0, 0, 0, 0.7); }
+/* ---- iPhone frame (SVG) + stylized Pulse app mock (placeholder for a real screenshot) ---- */
+.iphone { position: relative; max-width: 300px; margin: 0 auto; }
+.iphone__frame { display: block; width: 100%; height: auto; position: relative; z-index: 1; }
+.section--dark .iphone { filter: drop-shadow(0 26px 46px rgba(0, 0, 0, 0.55)); }
 
+/* the app screen sits inside the iPhone's display area (insets derived from the SVG geometry) */
 .pulse-app {
-    position: relative; min-height: 560px; display: flex; flex-direction: column;   /* in-flow height, no aspect-ratio dependency */
-    padding: 36px 18px 22px; color: #fff;
+    position: absolute; z-index: 2;
+    top: 1.9%; left: 4.6%; right: 4.6%; bottom: 1.9%;
+    display: flex; flex-direction: column;
+    padding: 11% 9% 7%; color: #fff;            /* top padding clears the Dynamic Island area */
+    border-radius: 13% / 6%; overflow: hidden;
     background: radial-gradient(120% 75% at 50% 0%, #15243c 0%, #0b1120 55%, #070a12 100%);
 }
 .pulse-app__top { display: flex; align-items: center; justify-content: space-between;
