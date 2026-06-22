@@ -744,6 +744,9 @@ body.no-footer-cta .footer__cta { display: none; }
 .offer-card__title { font-family: var(--font-serif); font-size: var(--text-h3); margin-bottom: var(--space-4); color: #fff; }
 .offer-card__text { font-size: var(--text-body); line-height: var(--leading-medium); color: var(--color-dark-muted-light); margin-bottom: var(--space-8); }
 .offer-card .btn { margin-top: auto; align-self: flex-start; }
+/* Resources "most popular" cards sit on a light section, so give them a black fill */
+.popular-cards .offer-card { background: #0A0A0A; }
+.popular-cards .offer-card--feature { background: #0A0A0A; }
 
 /* ---- Fierce for Life membership promo ------------------------------------- */
 .membership { background: #F4F2EC; }
