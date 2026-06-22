@@ -14,17 +14,135 @@
 
     <div data-include="../shared/nav.html"></div>
 
-    <!-- ✏️ PLACEHOLDER PAGE, Resources content to be added. Edit the copy below. -->
+    <!-- ✏️ EDIT YOUR COPY BELOW. Change the words, not the class="..." or the structure.
+         All resource links are placeholders (#). Point them at real content when it exists.
+         The newsletter form has no backend yet, wire the action to your ESP before launch. -->
     <main>
+
+        <!-- ============ PAGE HERO ============ -->
         <section class="hero">
             <div class="wrap">
-                <div class="hero__inner">
-                    <span class="eyebrow">Resources</span>
-                    <h1 class="hero__title">Insights for leaders who have <span class="gradient-text">the conversation.</span></h1>
-                    <p class="hero__lead">Articles, case studies, webinars, and guides. This page is a placeholder, content to be added.</p>
+                <div class="hero__inner hero__inner--center">
+                    <span class="eyebrow">Research &amp; insights</span>
+                    <h1 class="hero__title">Free tools to get your team <span class="gradient-text">talking.</span></h1>
+                    <p class="hero__lead">Guides, research, and real stories to help your people communicate, connect, and lead the conversations that move work forward.</p>
                 </div>
             </div>
         </section>
+
+        <!-- ============ FEATURED RESOURCE ============ -->
+        <section class="section chapter-offwhite">
+            <div class="wrap">
+                <div class="split">
+                    <div>
+                        <span class="eyebrow">Featured</span>
+                        <h2 class="section__title">The state of workplace conversations.</h2>
+                        <p class="section__lead mt-0" style="margin-top: var(--space-5);">Our latest research on what's really getting in the way of candor at work, and what the best teams do differently. Free, and free of fluff.</p>
+                        <a class="btn btn--primary btn--lg" href="#" style="margin-top: var(--space-8);">Read the report &rarr;</a>
+                    </div>
+                    <div class="panel resource-cover">
+                        <span class="resource-cover__type">Research report</span>
+                        <h3 class="resource-cover__title">The State of Workplace Conversations, 2026</h3>
+                        <span class="resource-cover__meta">Free download &middot; 18 pages</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ BROWSE BY TYPE ============ -->
+        <!-- Category cards reuse the program-card pattern (hover reveals the brand gradient). -->
+        <section class="section">
+            <div class="wrap">
+                <div class="section__head section__head--center">
+                    <span class="eyebrow">Browse by type</span>
+                    <h2 class="section__title">Find what your team needs.</h2>
+                </div>
+                <div class="grid grid--3" style="margin-top: var(--space-12);">
+                    <a class="prog-card" href="#">
+                        <h3 class="prog-card__name">Articles &amp; Blog</h3>
+                        <p class="prog-card__desc">Practical insights on candor, feedback, and leading hard conversations. New posts every week.</p>
+                        <span class="prog-card__link">Read the blog <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                    </a>
+                    <a class="prog-card" href="#">
+                        <h3 class="prog-card__name">Guides &amp; eBooks</h3>
+                        <p class="prog-card__desc">Step-by-step playbooks your team can put to work today. Free to download.</p>
+                        <span class="prog-card__link">Browse guides <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                    </a>
+                    <a class="prog-card" href="#">
+                        <h3 class="prog-card__name">Case Studies</h3>
+                        <p class="prog-card__desc">How real organizations turned hard conversations into measurable results.</p>
+                        <span class="prog-card__link">See the proof <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                    </a>
+                    <a class="prog-card" href="#">
+                        <h3 class="prog-card__name">Webinars &amp; Videos</h3>
+                        <p class="prog-card__desc">Watch our facilitators and guests unpack the conversations that move teams.</p>
+                        <span class="prog-card__link">Watch now <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                    </a>
+                    <a class="prog-card" href="#">
+                        <h3 class="prog-card__name">Research &amp; Whitepapers</h3>
+                        <p class="prog-card__desc">The data behind the method, and what it means for your people.</p>
+                        <span class="prog-card__link">Get the research <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                    </a>
+                    <a class="prog-card" href="#">
+                        <h3 class="prog-card__name">Tools &amp; Assessments</h3>
+                        <p class="prog-card__desc">Free diagnostics and questionnaires to get your team talking.</p>
+                        <span class="prog-card__link">Try a tool <span class="prog-card__arrow" aria-hidden="true">&rarr;</span></span>
+                    </a>
+                </div>
+                <p class="center" style="margin-top: var(--space-10);">
+                    Looking for press releases or media coverage? <a class="text-link" href="#">Visit the Newsroom &rarr;</a>
+                </p>
+            </div>
+        </section>
+
+        <!-- ============ MOST POPULAR RESOURCES ============ -->
+        <section class="section section--surface">
+            <div class="wrap">
+                <div class="section__head section__head--center">
+                    <span class="eyebrow">Most popular</span>
+                    <h2 class="section__title">Start with these.</h2>
+                </div>
+                <div class="grid grid--3 ways__grid">
+                    <article class="offer-card">
+                        <span class="offer-card__tag">Guide</span>
+                        <h3 class="offer-card__title">The Feedback Playbook</h3>
+                        <p class="offer-card__text">A manager's guide to giving feedback that builds trust, not defensiveness.</p>
+                        <a class="btn btn--ghost" href="#">Read the guide &rarr;</a>
+                    </article>
+                    <article class="offer-card offer-card--feature">
+                        <span class="offer-card__tag offer-card__tag--accent">Case study</span>
+                        <h3 class="offer-card__title">Cutting leadership turnover in half</h3>
+                        <p class="offer-card__text">How one health system used Fierce to keep its best leaders, and the numbers behind it.</p>
+                        <a class="btn btn--primary" href="#">Read the story &rarr;</a>
+                    </article>
+                    <article class="offer-card">
+                        <span class="offer-card__tag">Webinar</span>
+                        <h3 class="offer-card__title">The conversation your team is avoiding</h3>
+                        <p class="offer-card__text">A 30-minute session on naming the hard thing early, before it becomes a crisis.</p>
+                        <a class="btn btn--ghost" href="#">Watch the replay &rarr;</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ NEWSLETTER SIGNUP ============ -->
+        <!-- ✏️ Static form, no backend. Set the <form> action to your email provider before launch. -->
+        <section class="section section--dark newsletter">
+            <div class="wrap">
+                <div class="section__head section__head--center">
+                    <span class="eyebrow">Stay in the loop</span>
+                    <h2 class="section__title">Get the best of Fierce in your inbox.</h2>
+                    <p class="section__lead">Conversation tools, fresh research, and new guides. No spam, unsubscribe anytime.</p>
+                </div>
+                <form class="newsletter__form" action="#" method="post" novalidate>
+                    <label class="visually-hidden" for="news-email">Email address</label>
+                    <input class="newsletter__input" id="news-email" type="email" name="email" placeholder="you@company.com" autocomplete="email" required>
+                    <button class="btn btn--primary" type="submit">Subscribe</button>
+                </form>
+                <p class="newsletter__note">Join thousands of leaders getting our best work first.</p>
+            </div>
+        </section>
+
     </main>
     <!-- /EDIT -->
 
