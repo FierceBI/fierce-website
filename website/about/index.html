@@ -20,9 +20,9 @@
         <!-- PAGE HERO -->
         <section class="hero">
             <div class="wrap">
-                <div class="hero__inner">
+                <div class="hero__inner hero__inner--center" style="max-width: var(--container-wide);">
                     <span class="eyebrow">About Fierce</span>
-                    <h1 class="hero__title">It started with one idea: <span class="gradient-text">the conversation is the relationship.</span></h1>
+                    <h1 class="hero__title">It started with one idea: the <span class="gradient-text">conversation</span> is the relationship.</h1>
                     <p class="hero__lead">Susan Scott spent years watching smart organizations fail at the same thing, the conversations they weren't having. Fierce turned that insight into a methodology that's now shaped leaders in more than 100 countries.</p>
                 </div>
             </div>
@@ -42,9 +42,30 @@
                             <li>Delivered by a global bench of master facilitators</li>
                         </ul>
                     </div>
-                    <div class="panel panel--navy">
-                        <div class="panel__stat">2.5M+</div>
+                    <div class="panel panel--black">
+                        <div class="panel__stat gradient-text">2.5M+</div>
                         <p class="panel__text">people have learned to have fiercer conversations, across 100+ countries and every major industry.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SUSAN QUOTE + VIDEO (portrait, in the iPhone frame) -->
+        <!-- ✏️ Source video is 1920x1080 landscape with orange/black side-fill; object-fit: cover
+             crops it to Susan's centered portrait. Swap our-story-susan.mp4 to change it. -->
+        <section class="section section--dark">
+            <div class="wrap">
+                <div class="split">
+                    <div>
+                        <span class="eyebrow">In her words</span>
+                        <blockquote class="pull-quote">&ldquo;While no single conversation is guaranteed to change the trajectory of a career, a business, or a life, any <span class="gradient-text">conversation</span> can.&rdquo;</blockquote>
+                        <p class="pull-quote__by"><strong>Susan Scott</strong>, Fierce Founder</p>
+                    </div>
+                    <div class="iphone">
+                        <img class="iphone__frame" src="../shared/images/iphone-frame.svg" alt="" aria-hidden="true">
+                        <div class="iphone__screen">
+                            <video class="iphone__video" src="../shared/images/our-story-susan.mp4" poster="../shared/images/our-story-susan-poster.jpg" controls playsinline preload="metadata"></video>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -57,22 +78,110 @@
                     <span class="eyebrow">Our approach</span>
                     <h2 class="section__title">What makes a conversation fierce.</h2>
                 </div>
-                <div class="grid grid--2">
-                    <div class="feature"><h3 class="feature__title">Interrogate reality</h3><p class="feature__text">Surface what's actually true, not the comfortable version everyone agrees to.</p></div>
-                    <div class="feature"><h3 class="feature__title">Provoke learning</h3><p class="feature__text">Trade certainty for curiosity, and conversations become a source of growth.</p></div>
-                    <div class="feature"><h3 class="feature__title">Tackle tough challenges</h3><p class="feature__text">Name and address the real issue today, before it compounds into a crisis.</p></div>
-                    <div class="feature"><h3 class="feature__title">Enrich relationships</h3><p class="feature__text">Each conversation either builds the relationship or erodes it. We build.</p></div>
+                <!-- ✏️ Photo cards (image behind + dark overlay), same pattern as the delivery and
+                     "why it sticks" sections. Add a real photo with
+                     style="background-image: url('../shared/images/XXX.jpg');" and remove the
+                     learn-card--placeholder class + the "Image coming" chip. -->
+                <div class="grid grid--2 approach-cards" style="margin-top: var(--space-12);">
+                    <article class="learn-card" style="background-image: url('../shared/images/approach-interrogate-reality.jpg');">
+                        <div class="learn-card__body">
+                            <h3 class="learn-card__title gradient-text">Interrogate reality</h3>
+                            <p class="learn-card__text">Surface what's actually true, not the comfortable version everyone agrees to.</p>
+                        </div>
+                    </article>
+                    <article class="learn-card" style="background-image: url('../shared/images/approach-provoke-learning.jpg');">
+                        <div class="learn-card__body">
+                            <h3 class="learn-card__title gradient-text">Provoke learning</h3>
+                            <p class="learn-card__text">Trade certainty for curiosity, and conversations become a source of growth.</p>
+                        </div>
+                    </article>
+                    <article class="learn-card" style="background-image: url('../shared/images/approach-tackle-challenges.jpg');">
+                        <div class="learn-card__body">
+                            <h3 class="learn-card__title gradient-text">Tackle tough challenges</h3>
+                            <p class="learn-card__text">Name and address the real issue today, before it compounds into a crisis.</p>
+                        </div>
+                    </article>
+                    <article class="learn-card" style="background-image: url('../shared/images/approach-enrich-relationships.jpg');">
+                        <div class="learn-card__body">
+                            <h3 class="learn-card__title gradient-text">Enrich relationships</h3>
+                            <p class="learn-card__text">Each conversation either builds the relationship or erodes it. We build.</p>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <!-- THE PEOPLE -->
+        <!-- THE PEOPLE / LEADERSHIP -->
+        <!-- ✏️ Headshots already include the orange ring (circle-clipped in CSS).
+             Gabe De La Rosa has no photo yet (initials placeholder, add team/gabe-de-la-rosa.webp).
+             ⚠️ Confirm the photo mapped to "Chantell Brandt" (from pitch-deck-head-shots-2) is correct. -->
         <section class="section section--surface">
             <div class="wrap">
-                <div class="section__head">
+                <div class="section__head section__head--center">
                     <span class="eyebrow">Our people</span>
                     <h2 class="section__title">Practitioners, not just presenters.</h2>
-                    <p class="section__lead">Fierce is delivered by a global network of master facilitators who've led in the rooms they now train. Add the leadership team and master facilitator bios here.</p>
+                    <p class="section__lead">Fierce is led by people who have sat in the rooms they now train, builders of the method, not just messengers.</p>
+                </div>
+                <div class="grid grid--3 team-grid" style="margin-top: var(--space-12);">
+                    <div class="person">
+                        <img class="person__photo" src="../shared/images/team/susan-scott.webp" alt="Susan Scott" loading="lazy">
+                        <h3 class="person__name">Susan Scott</h3>
+                        <p class="person__role">Fierce Founder</p>
+                    </div>
+                    <div class="person">
+                        <img class="person__photo" src="../shared/images/team/edward-beltran.webp" alt="Edward J. Beltran" loading="lazy">
+                        <h3 class="person__name">Edward J. Beltran</h3>
+                        <p class="person__role">CEO &amp; Best-Selling Author</p>
+                    </div>
+                    <div class="person">
+                        <img class="person__photo" src="../shared/images/team/gabe-de-la-rosa.jpg" alt="Gabe De La Rosa" loading="lazy">
+                        <h3 class="person__name">Gabe De La Rosa</h3>
+                        <p class="person__role">Chief Behavioral Science Officer</p>
+                    </div>
+                    <div class="person">
+                        <img class="person__photo" src="../shared/images/team/geeta-premkrishnan.webp" alt="Geeta Premkrishnan" loading="lazy">
+                        <h3 class="person__name">Geeta Premkrishnan</h3>
+                        <p class="person__role">EVP, Finance &amp; Operations</p>
+                    </div>
+                    <div class="person">
+                        <img class="person__photo" src="../shared/images/team/chantell-brandt.webp" alt="Chantell Brandt" loading="lazy">
+                        <h3 class="person__name">Chantell Brandt</h3>
+                        <p class="person__role">VP, Strategic Client Solutions</p>
+                    </div>
+                    <div class="person">
+                        <img class="person__photo" src="../shared/images/team/regent-cornell.webp" alt="Regent Cornell" loading="lazy">
+                        <h3 class="person__name">Regent Cornell</h3>
+                        <p class="person__role">VP, Market Evolution &amp; Strategic Growth</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MASTER FACILITATORS -->
+        <section class="section section--dark">
+            <div class="wrap">
+                <div class="split">
+                    <div>
+                        <span class="eyebrow">Master facilitators</span>
+                        <h2 class="section__title">A global bench, in the room with your team.</h2>
+                        <p class="section__lead mt-0" style="margin-top: var(--space-5);">Beyond the leadership team, Fierce is delivered by a worldwide network of master facilitators, seasoned leaders and coaches certified in the method. They have run the hard conversations they now teach, in the industries your people work in.</p>
+                        <a class="btn btn--primary" href="#" style="margin-top: var(--space-8);">Meet the facilitators &rarr;</a>
+                    </div>
+                    <div class="panel">
+                        <div class="panel__stat">100+</div>
+                        <p class="panel__text">countries where certified Fierce facilitators deliver the method, in person and online.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHO WE ARE / WOMEN-OWNED -->
+        <section class="section">
+            <div class="wrap">
+                <div class="section__head section__head--center">
+                    <span class="eyebrow">Who we are</span>
+                    <h2 class="section__title">A women-owned business, built to last.</h2>
+                    <p class="section__lead">Certified women-owned by WBENC and the Astra Women's Business Alliance. Headquartered in Seattle, delivering in more than 100 countries, for over 20 years.</p>
                 </div>
             </div>
         </section>
@@ -83,5 +192,17 @@
     <div data-include="../shared/footer.html"></div>
 
     <script src="../shared/include.js"></script>
+    <script>
+        // Susan video: poster shows her face; skip the orange "Susan, Founder" intro card on first play.
+        (function () {
+            var v = document.querySelector('.iphone__video');
+            if (!v) return;
+            var skipped = false;
+            var INTRO_END = 5;   // seconds — adjust if Susan starts speaking earlier/later
+            v.addEventListener('play', function () {
+                if (!skipped && v.currentTime < INTRO_END) { v.currentTime = INTRO_END; skipped = true; }
+            });
+        })();
+    </script>
 </body>
 </html>
