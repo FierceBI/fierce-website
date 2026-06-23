@@ -988,6 +988,24 @@ body.no-footer-cta .footer__cta { display: none; }
 .sticks-cards .learn-card { min-height: 300px; }
 .approach-cards .learn-card { min-height: 300px; }
 
+/* ---- Contact: form + details ---------------------------------------------- */
+.contact-form { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-5); }
+.field { display: flex; flex-direction: column; gap: var(--space-2); }
+.field--full { grid-column: 1 / -1; }
+.field__label { font-size: var(--text-body-small); font-weight: var(--weight-semibold); color: var(--color-text); }
+.field__input {
+    font-family: inherit; font-size: var(--text-body); color: var(--color-text);
+    padding: 13px 16px; background: #fff;
+    border: 1px solid var(--border-emphasis); border-radius: var(--radius-lg);
+    transition: border-color 0.2s ease;
+}
+.field__input::placeholder { color: var(--color-muted); }
+.field__input:focus { outline: none; border-color: var(--gradient-mid); }
+.field__textarea { min-height: 140px; resize: vertical; }
+.contact-form__note { margin-top: var(--space-4); font-size: var(--text-body-small); color: var(--color-muted); }
+.contact-form-wrap { max-width: 680px; margin: 0 auto; }
+@media (max-width: 560px) { .contact-form { grid-template-columns: 1fr; } }
+
 /* ---- About: Susan pull-quote + video-in-iPhone ---------------------------- */
 .pull-quote { font-family: var(--font-serif); font-size: var(--text-h2); line-height: var(--leading-snug); color: #fff; }
 .pull-quote__by { margin-top: var(--space-6); font-size: var(--text-body-small); letter-spacing: 0.01em; color: var(--color-dark-muted-light); }
