@@ -8,7 +8,7 @@
       <h2>Ready to change how your leaders <span class="gradient-text">communicate?</span></h2>
       <p>Tell us what conversation your team has been avoiding. We'll show you what's possible.</p>
     </div>
-    <a class="btn btn--primary btn--lg" href="../contact/">Talk to our team</a>
+    <button class="btn btn--primary btn--lg" data-open-modal="contact-form">Talk to our team</button>
   </div>
 
   <div class="footer__grid">
@@ -64,3 +64,22 @@
     <span class="footer__legal"><a href="#">Privacy</a> · <a href="#">Terms</a></span>
   </div>
 </footer>
+
+<!-- Contact Form Modal (shared across all pages) -->
+<div class="lightbox" id="contact-form" role="dialog" aria-modal="true" aria-label="Contact Fierce" hidden>
+  <div class="lightbox__overlay" data-close-modal></div>
+  <div class="lightbox__panel lightbox__panel--form">
+    <button class="lightbox__close" data-close-modal aria-label="Close form">&times;</button>
+    <div class="lightbox__content">
+      <div class="lightbox__header">
+        <span class="eyebrow">Let's talk</span>
+        <h2 class="lightbox__title">Start the <span class="gradient-text">conversation.</span></h2>
+        <p class="lightbox__lead">Tell us about your team and we'll reach out within one business day.</p>
+      </div>
+      <div class="lightbox__form">
+        <div class="hs-form-frame" data-region="na1" data-form-id="9991703d-f5a5-49c6-b5e7-fa0d9e8bb04f" data-portal-id="21395487"></div>
+      </div>
+    </div>
+  </div>
+</div>
+

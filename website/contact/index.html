@@ -16,9 +16,7 @@
 
     <!-- ✏️ EDIT YOUR COPY BELOW. Change the words, not the class="..." or the structure.
          STUBS to wire before launch:
-           • "Book a call" -> your Calendly/HubSpot meeting link (currently #)
-           • "Find your program" -> the diagnostic (currently points to /programs/)
-           • The form is static -> replace with your HubSpot form embed, or set <form action>. -->
+           • "Book a call" -> your Calendly/HubSpot meeting link (currently #) -->
     <main>
 
         <!-- ============ PAGE HERO ============ -->
@@ -60,7 +58,6 @@
         </section>
 
         <!-- ============ FORM (the "something else" path) ============ -->
-        <!-- ✏️ Static form, no backend. Replace with your HubSpot form embed before launch. -->
         <section class="section section--surface" id="note">
             <div class="wrap">
                 <div class="contact-form-wrap">
@@ -68,38 +65,10 @@
                         <span class="eyebrow">Send us a note</span>
                         <h2 class="section__title">Tell us what you need.</h2>
                     </div>
-                    <form class="contact-form" action="#" method="post" novalidate style="margin-top: var(--space-10);">
-                        <div class="field">
-                            <label class="field__label" for="c-name">Name</label>
-                            <input class="field__input" id="c-name" name="name" type="text" autocomplete="name" required>
-                        </div>
-                        <div class="field">
-                            <label class="field__label" for="c-email">Work email</label>
-                            <input class="field__input" id="c-email" name="email" type="email" autocomplete="email" required>
-                        </div>
-                        <div class="field">
-                            <label class="field__label" for="c-company">Company</label>
-                            <input class="field__input" id="c-company" name="company" type="text" autocomplete="organization">
-                        </div>
-                        <div class="field">
-                            <label class="field__label" for="c-interest">What can we help with?</label>
-                            <select class="field__input" id="c-interest" name="interest">
-                                <option value="program">A program for my team</option>
-                                <option value="pulse">Pulse</option>
-                                <option value="facilitator">Getting certified</option>
-                                <option value="press">Press or media</option>
-                                <option value="other">Something else</option>
-                            </select>
-                        </div>
-                        <div class="field field--full">
-                            <label class="field__label" for="c-message">Your message</label>
-                            <textarea class="field__input field__textarea" id="c-message" name="message" rows="5" placeholder="Tell us about the conversations getting in the way."></textarea>
-                        </div>
-                        <div class="field--full">
-                            <button class="btn btn--primary btn--lg" type="submit">Start the conversation &rarr;</button>
-                            <p class="contact-form__note">We reply within one business day. Prefer to talk? Call us at <a class="text-link" href="tel:+12067871100">(206) 787-1100</a>.</p>
-                        </div>
-                    </form>
+                    <div style="margin-top: var(--space-10);">
+                        <div class="hs-form-frame" data-region="na1" data-form-id="9991703d-f5a5-49c6-b5e7-fa0d9e8bb04f" data-portal-id="21395487"></div>
+                    </div>
+                    <p class="contact-form__note" style="text-align: center; margin-top: var(--space-6);">We reply within one business day. Prefer to talk? Call us at <a class="text-link" href="tel:+12067871100">(206) 787-1100</a>.</p>
                 </div>
             </div>
         </section>
@@ -110,5 +79,6 @@
     <div data-include="../shared/footer.html"></div>
 
     <script src="../shared/include.js"></script>
+    <script src="https://js.hsforms.net/forms/embed/21395487.js" defer></script>
 </body>
 </html>
