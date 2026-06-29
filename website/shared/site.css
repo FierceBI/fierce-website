@@ -1471,6 +1471,73 @@ body.no-footer-cta .footer__cta { display: none; }
     margin-bottom: var(--space-6);
 }
 
+/* ---- Facilitator Cards ---------------------------------------------------- */
+.facilitator-grid {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.facilitator-card {
+    display: flex;
+    flex-direction: column;
+    background: #1a1a1a;
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.facilitator-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.facilitator-card__image {
+    height: 280px;
+    background-size: cover;
+    background-position: center top;
+    background-color: #2a2a2a;
+}
+
+.facilitator-card__body {
+    padding: var(--space-6) var(--space-8) var(--space-8);
+    display: flex;
+    flex-direction: column;
+}
+
+.facilitator-card__name {
+    font-family: var(--font-serif);
+    font-size: var(--text-h3);
+    font-weight: var(--weight-regular);
+    color: #fff;
+    margin: 0 0 var(--space-1) 0;
+}
+
+.facilitator-card__name::after {
+    display: none;
+}
+
+.facilitator-card__role {
+    display: block;
+    font-size: var(--text-body-small);
+    font-weight: var(--weight-semibold);
+    color: var(--gradient-mid);
+    margin-bottom: var(--space-4);
+}
+
+.facilitator-card__bio {
+    font-size: var(--text-body);
+    line-height: var(--leading-medium);
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .facilitator-card__image {
+        height: 220px;
+    }
+}
+
 /* ---- HubSpot Form Styling ------------------------------------------------- */
 /* Override HubSpot's default styles to match our design system */
 .hs-form-frame,
