@@ -996,6 +996,13 @@ body.no-footer-cta .footer__cta { display: none; }
     align-items: flex-end;
     background-size: cover;
     background-position: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+a.learn-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
 }
 /* dark overlay so the title + text stay legible on any photo */
 .learn-card::before {
@@ -1068,6 +1075,57 @@ body.no-footer-cta .footer__cta { display: none; }
     background:
         linear-gradient(#fff, #fff) padding-box,
         linear-gradient(135deg, var(--gradient-start), var(--gradient-mid), var(--gradient-end)) border-box;
+}
+
+/* ---- How We Deliver: feature blocks & ideal cards ------------------------- */
+.feature-block {
+    text-align: center;
+    padding: var(--space-6);
+}
+
+.feature-block__title {
+    font-family: var(--font-serif);
+    font-size: var(--text-h4);
+    margin-bottom: var(--space-3);
+}
+
+.feature-block__title::after {
+    display: none;
+}
+
+.feature-block__text {
+    font-size: var(--text-body);
+    color: var(--color-muted);
+    line-height: var(--leading-medium);
+}
+
+.ideal-card {
+    background: #fff;
+    border-radius: var(--radius-2xl);
+    padding: var(--space-8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.ideal-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+.ideal-card__title {
+    font-family: var(--font-serif);
+    font-size: var(--text-h4);
+    margin-bottom: var(--space-3);
+}
+
+.ideal-card__title::after {
+    display: none;
+}
+
+.ideal-card__text {
+    font-size: var(--text-body);
+    color: var(--color-muted);
+    line-height: var(--leading-medium);
 }
 
 /* ---- Resources: featured cover + newsletter ------------------------------- */
