@@ -1334,6 +1334,82 @@ body.no-footer-cta .footer__cta { display: none; }
     }
 }
 
+/* ---- Case Study Cards: Logo-focused design -------------------------------- */
+.case-card {
+    display: flex;
+    flex-direction: column;
+    background: #1a1a1a;
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    transition: transform 0.26s ease, box-shadow 0.26s ease;
+}
+.case-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.4);
+}
+.case-card__logo {
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    background-color: #fff;
+}
+.case-card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: var(--space-6);
+}
+.case-card__title {
+    font-family: var(--font-serif);
+    font-size: var(--text-h4);
+    line-height: var(--leading-snug);
+    color: #fff;
+    margin-bottom: var(--space-3);
+}
+.case-card__text {
+    font-size: var(--text-body-small);
+    line-height: var(--leading-medium);
+    color: rgba(255, 255, 255, 0.7);
+    flex: 1;
+    margin-bottom: var(--space-5);
+}
+.case-card__link {
+    font-size: var(--text-body-small);
+    font-weight: var(--weight-semibold);
+    color: var(--gradient-start);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.case-card__link:hover {
+    color: var(--gradient-mid);
+}
+/* Compact variant for grid of 4 */
+.case-card--compact .case-card__logo {
+    height: 120px;
+}
+.case-card--compact .case-card__body {
+    padding: var(--space-4);
+}
+.case-card--compact .case-card__title {
+    font-size: var(--text-body);
+    margin-bottom: var(--space-2);
+}
+/* 4-column grid */
+.grid--4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+}
+@media (max-width: 1024px) {
+    .grid--4 { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 768px) {
+    .grid--4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+    .grid--4 { grid-template-columns: 1fr; }
+}
+
 /* ---- HubSpot Form Styling ------------------------------------------------- */
 /* Override HubSpot's default styles to match our design system */
 .hs-form-frame,
