@@ -1410,6 +1410,67 @@ body.no-footer-cta .footer__cta { display: none; }
     .grid--4 { grid-template-columns: 1fr; }
 }
 
+/* ---- Tool Cards: Assessment/Diagnostic tools ------------------------------ */
+.tool-card {
+    display: flex;
+    flex-direction: column;
+    background: #1a1a1a;
+    border-radius: var(--radius-2xl);
+    padding: var(--space-8);
+    transition: transform 0.26s ease, box-shadow 0.26s ease;
+}
+.tool-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.4);
+}
+.tool-card__icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--gradient-start), var(--gradient-mid));
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-5);
+}
+.tool-card__icon svg {
+    width: 28px;
+    height: 28px;
+    color: #fff;
+}
+.tool-card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+.tool-card__tag {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: var(--text-micro);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: var(--gradient-start);
+    background: rgba(235, 117, 37, 0.15);
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-3);
+}
+.tool-card__title {
+    font-family: var(--font-serif);
+    font-size: var(--text-h3);
+    line-height: var(--leading-snug);
+    color: #fff;
+    margin-bottom: var(--space-3);
+}
+.tool-card__text {
+    font-size: var(--text-body);
+    line-height: var(--leading-medium);
+    color: rgba(255, 255, 255, 0.7);
+    flex: 1;
+    margin-bottom: var(--space-6);
+}
+
 /* ---- HubSpot Form Styling ------------------------------------------------- */
 /* Override HubSpot's default styles to match our design system */
 .hs-form-frame,

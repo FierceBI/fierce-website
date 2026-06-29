@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools & Assessments, Fierce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../fierce-design-system/theme.css">
+    <link rel="stylesheet" href="../../shared/site.css">
+</head>
+<body>
+
+    <div data-include="../../shared/nav.html"></div>
+
+    <main>
+
+        <!-- ============ PAGE HERO ============ -->
+        <section class="hero">
+            <div class="wrap">
+                <div class="hero__inner hero__inner--center">
+                    <span class="eyebrow">Free tools</span>
+                    <h1 class="hero__title">Tools & <span class="gradient-text">Assessments</span></h1>
+                    <p class="hero__lead">Free diagnostics and assessments to help you understand where your team stands and what conversations need to happen next.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ TOOLS GRID ============ -->
+        <section class="section">
+            <div class="wrap">
+                <div class="grid grid--2" style="margin-top: var(--space-8); gap: var(--space-8);">
+
+                    <article class="tool-card">
+                        <div class="tool-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 11l3 3L22 4"/>
+                                <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+                            </svg>
+                        </div>
+                        <div class="tool-card__body">
+                            <span class="tool-card__tag">Assessment</span>
+                            <h3 class="tool-card__title">Fierce Factor Survey</h3>
+                            <p class="tool-card__text">9 questions to uncover if your conversations are setting you up for success. Take this quick assessment to discover your conversation strengths and areas for growth.</p>
+                            <a class="btn btn--primary" href="https://fiercesurvey.com/fiercefactor" target="_blank">Take the Survey &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="tool-card">
+                        <div class="tool-card__icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <div class="tool-card__body">
+                            <span class="tool-card__tag">Diagnostic</span>
+                            <h3 class="tool-card__title">Fierce Program Finder</h3>
+                            <p class="tool-card__text">Not sure which program is right for your team? Answer a few quick questions about the conversations getting in the way, and we'll recommend the best fit.</p>
+                            <button class="btn btn--primary" data-open-modal="diagnostic">Find Your Program &rarr;</button>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CTA ============ -->
+        <section class="section section--surface">
+            <div class="wrap">
+                <div class="section__head section__head--center">
+                    <span class="eyebrow">Need help?</span>
+                    <h2 class="section__title">Talk to a real person.</h2>
+                    <p class="section__lead">Our team can help you figure out the right starting point for your organization.</p>
+                </div>
+                <div class="center" style="margin-top: var(--space-8);">
+                    <button class="btn btn--primary btn--lg" data-open-modal="contact-form">Talk to our team &rarr;</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div data-include="../../shared/footer.html"></div>
+
+    <!-- Diagnostic lightbox -->
+    <div class="lightbox" id="diagnostic" role="dialog" aria-modal="true" aria-label="Fierce Diagnostic Tool" hidden>
+        <div class="lightbox__overlay" data-close-modal></div>
+        <div class="lightbox__panel">
+            <button class="lightbox__close" data-close-modal aria-label="Close diagnostic">&times;</button>
+            <iframe class="lightbox__frame" title="Fierce Diagnostic Tool" data-src="https://fierceinc.com/the-workshop-brief/" allow="fullscreen"></iframe>
+        </div>
+    </div>
+
+    <script src="../../shared/include.js"></script>
+    <script>
+        // Diagnostic lightbox
+        (function () {
+            var lb = document.getElementById('diagnostic');
+            if (!lb) return;
+            var frame = lb.querySelector('.lightbox__frame');
+            var closeBtn = lb.querySelector('.lightbox__close');
+            var lastFocus = null;
+
+            function open(trigger) {
+                lastFocus = trigger || document.activeElement;
+                if (frame && !frame.getAttribute('src')) {
+                    frame.setAttribute('src', frame.getAttribute('data-src'));
+                }
+                lb.hidden = false;
+                void lb.offsetWidth;
+                lb.classList.add('is-open');
+                document.body.style.overflow = 'hidden';
+                closeBtn.focus();
+                document.addEventListener('keydown', onKey, true);
+            }
+            function close() {
+                lb.classList.add('is-closing');
+                lb.classList.remove('is-open');
+                document.removeEventListener('keydown', onKey, true);
+                document.body.style.overflow = '';
+                setTimeout(function () {
+                    lb.hidden = true;
+                    lb.classList.remove('is-closing');
+                    if (lastFocus && lastFocus.focus) lastFocus.focus();
+                }, 200);
+            }
+            function onKey(e) {
+                if (e.key === 'Escape') { e.preventDefault(); close(); return; }
+                if (e.key === 'Tab') {
+                    var f = [closeBtn, frame];
+                    var i = f.indexOf(document.activeElement);
+                    if (e.shiftKey && i <= 0) { e.preventDefault(); frame.focus(); }
+                    else if (!e.shiftKey && i === f.length - 1) { e.preventDefault(); closeBtn.focus(); }
+                }
+            }
+            document.addEventListener('click', function (e) {
+                var opener = e.target.closest('[data-open-modal="diagnostic"]');
+                if (opener) { e.preventDefault(); open(opener); return; }
+                if (e.target.closest('[data-close-modal]')) close();
+            });
+        })();
+    </script>
+</body>
+</html>
