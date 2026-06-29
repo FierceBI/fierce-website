@@ -1248,6 +1248,92 @@ body.no-footer-cta .footer__cta { display: none; }
 }
 .blog-card__link:hover { color: var(--color-accent); }
 
+/* ---- Resource Cards: eBooks/Guides with overlay --------------------------- */
+.resource-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #1a1a1a;
+    border-radius: var(--radius-2xl);
+    overflow: hidden;
+    transition: transform 0.26s ease, box-shadow 0.26s ease;
+}
+.resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.4);
+}
+.resource-card__image {
+    position: relative;
+    height: 220px;
+    background-size: cover;
+    background-position: center;
+    background-color: #2a2a2a;
+}
+/* Black opaque overlay on the image */
+.resource-card__image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%);
+}
+.resource-card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: var(--space-6);
+    background: linear-gradient(180deg, rgba(26, 26, 26, 0.95) 0%, rgba(26, 26, 26, 1) 100%);
+}
+.resource-card__tag {
+    display: inline-block;
+    align-self: flex-start;
+    font-size: var(--text-micro);
+    font-weight: var(--weight-semibold);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: var(--gradient-start);
+    background: rgba(235, 117, 37, 0.15);
+    padding: 4px 10px;
+    border-radius: var(--radius-full);
+    margin-bottom: var(--space-3);
+}
+.resource-card__title {
+    font-family: var(--font-serif);
+    font-size: var(--text-h4);
+    line-height: var(--leading-snug);
+    color: #fff;
+    margin-bottom: var(--space-3);
+}
+.resource-card__text {
+    font-size: var(--text-body-small);
+    line-height: var(--leading-medium);
+    color: rgba(255, 255, 255, 0.7);
+    flex: 1;
+    margin-bottom: var(--space-5);
+}
+/* Horizontal variant for book section */
+.resource-card--horizontal {
+    flex-direction: row;
+}
+.resource-card--horizontal .resource-card__image {
+    width: 200px;
+    height: auto;
+    min-height: 280px;
+    flex-shrink: 0;
+}
+.resource-card--horizontal .resource-card__body {
+    justify-content: center;
+}
+@media (max-width: 680px) {
+    .resource-card--horizontal {
+        flex-direction: column;
+    }
+    .resource-card--horizontal .resource-card__image {
+        width: 100%;
+        height: 200px;
+        min-height: auto;
+    }
+}
+
 /* ---- HubSpot Form Styling ------------------------------------------------- */
 /* Override HubSpot's default styles to match our design system */
 .hs-form-frame,
