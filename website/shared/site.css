@@ -1200,7 +1200,9 @@ a.learn-card:hover {
 .blog-featured__image {
     position: relative;
     min-height: 400px;
-    background: linear-gradient(135deg, #d4d0c8 0%, #b8b4ac 100%);
+    background-color: #d4d0c8;
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
