@@ -1202,7 +1202,7 @@ a.learn-card:hover {
     min-height: 400px;
     background-color: #d4d0c8;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1249,7 +1249,7 @@ a.learn-card:hover {
     height: 200px;
     background-color: #e8e4dc;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     display: flex;
     align-items: center;
     justify-content: center;
