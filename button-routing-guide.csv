@@ -1,0 +1,79 @@
+Page,Button Text,Destination Type,Destination URL/Action
+Homepage,Talk to our team,Modal,contact-form (HubSpot form ID: 9991703d-f5a5-49c6-b5e7-fa0d9e8bb04f)
+Homepage,See the methodology,Internal Link,/website/why-fierce/
+Homepage,Start the diagnostic,Modal,diagnostic (iframe: https://fierceinc.com/the-workshop-brief/)
+Homepage,See all programs,Internal Link,/website/programs/
+Homepage,Reserve your spot (Learning Series),External Link,https://fierceinc.com/fierce-learning-series
+Homepage,Book a discovery call,Modal,contact-form
+Nav (all pages),Talk to our team,Modal,contact-form
+Footer (all pages),Talk to our team,Modal,contact-form
+Who We Serve,Talk to our team,Modal,contact-form
+Who We Serve,Take the diagnostic,External Link,https://fierceinc.com/the-workshop-brief/
+Who We Serve,ask how we tailor it to yours,Internal Link,/website/contact/
+Programs Index,Reserve your spot (Learning Series),External Link,https://fierceinc.com/fierce-learning-series
+Programs Index,Reserve your seat (Leadership Labs),External Link,https://fierceinc.com/leadership-lab/
+Programs Index,Book a call,Modal,contact-form
+Programs Index,Explore Fierce for Life,External Link,https://fierceinc.com/training/fierce-for-life-membership/
+Programs Index,Find my program,Modal,diagnostic (iframe: https://fierceinc.com/the-workshop-brief/)
+Programs Index,Talk to our team,Modal,contact-form
+Programs - Foundations,Talk to our team,Modal,contact-form
+Programs - Foundations,View all programs,Internal Link,/website/programs/
+Programs - Feedback,Talk to our team,Modal,contact-form
+Programs - Feedback,View all programs,Internal Link,/website/programs/
+Programs - Confront,Talk to our team,Modal,contact-form
+Programs - Confront,View all programs,Internal Link,/website/programs/
+Programs - Delegate,Talk to our team,Modal,contact-form
+Programs - Delegate,View all programs,Internal Link,/website/programs/
+Programs - Coach,Talk to our team,Modal,contact-form
+Programs - Accountability,Talk to our team,Modal,contact-form
+Programs - Accountability,View all programs,Internal Link,/website/programs/
+Programs - Awareness,Talk to our team,Modal,contact-form
+Programs - Awareness,View all programs,Internal Link,/website/programs/
+Programs - Influence,Talk to our team,Modal,contact-form
+Programs - Influence,View all programs,Internal Link,/website/programs/
+Programs - Change,Talk to our team,Modal,contact-form
+Programs - Change,View all programs,Internal Link,/website/programs/
+How We Deliver,Reserve your spot (Learning Series),External Link,https://fierceinc.com/fierce-learning-series
+How We Deliver,Reserve your seat (Leadership Labs),External Link,https://fierceinc.com/leadership-lab/
+How We Deliver,Book a call,Modal,contact-form
+How We Deliver,Talk to our team,Modal,contact-form
+How We Deliver - Virtual,Reserve your seat (Leadership Labs),External Link,https://fierceinc.com/leadership-lab/
+How We Deliver - Virtual,Reserve your free spot (Learning Series),External Link,https://fierceinc.com/fierce-learning-series
+How We Deliver - Virtual,Talk to our team,Modal,contact-form
+How We Deliver - In-Person,Reserve your free spot (Learning Series),External Link,https://fierceinc.com/fierce-learning-series
+How We Deliver - In-Person,Talk to our team,Modal,contact-form
+How We Deliver - On-Demand,Reserve your seat (Leadership Labs),External Link,https://fierceinc.com/leadership-lab/
+How We Deliver - On-Demand,Talk to our team,Modal,contact-form
+How We Deliver - Keynote,Reserve your free spot (Learning Series),External Link,https://fierceinc.com/fierce-learning-series
+How We Deliver - Keynote,Talk to our team,Modal,contact-form
+How We Deliver - 3D Simulations,Reserve your free spot (Learning Series),External Link,https://fierceinc.com/fierce-learning-series
+How We Deliver - 3D Simulations,Talk to our team,Modal,contact-form
+How We Deliver - Trainer Certification,Join the Facilitator Community,External Link,https://www.linkedin.com/groups/13841848/
+How We Deliver - Trainer Certification,Reserve your free spot (Learning Series),External Link,https://fierceinc.com/fierce-learning-series
+How We Deliver - Trainer Certification,Talk to our team,Modal,contact-form
+Why Fierce,Get the ROI breakdown,External Link,https://fierceinc.com/the-roi-of-skillful-conversation/
+Why Fierce,Read the case studies,Internal Link,/website/resources/case-studies/
+Resources,Explore whitepapers,External Link,https://fierceinc.com/resources/whitepapers/
+Resources,Reserve your spot (Learning Series),External Link,https://fierceinc.com/fierce-learning-series
+Resources,Reserve your seat (Leadership Labs),External Link,https://fierceinc.com/leadership-lab/
+Resources,Take the diagnostic,External Link,https://fierceinc.com/the-workshop-brief/
+Resources - Whitepapers,Download Whitepaper (multiple),External Link,Various fierceinc.com whitepaper URLs
+Resources - Whitepapers,Talk to our team,Modal,contact-form
+Resources - Case Studies,Read Case Study (Comcast),External Link,https://go.fierceinc.com/fierce-and-comcast-case-study
+Resources - Case Studies,Read Case Study (Temple Health),External Link,https://go.fierceinc.com/fierce-and-temple-health-case-study
+Resources - Case Studies,Read Case Study (T. Rowe Price),External Link,https://go.fierceinc.com/fierce-and-t-rowe-price-case-study
+Resources - Case Studies,Talk to our team,Modal,contact-form
+Resources - Guides,Download eBook (multiple),External Link,Various fierceinc.com guide URLs
+Resources - Guides,Talk to our team,Modal,contact-form
+Resources - Facilitators,Get Certified,Internal Link,/website/how-we-deliver/trainer-certification/
+Resources - Facilitators,Join the Community,External Link,https://www.linkedin.com/groups/13841848/
+Resources - Facilitators,Talk to our team,Modal,contact-form
+Resources - Tools,Take the Survey,External Link,https://fiercesurvey.com/fiercefactor
+Resources - Tools,Find Your Program,Modal,diagnostic (iframe: https://fierceinc.com/the-workshop-brief/)
+Resources - Tools,Talk to our team,Modal,contact-form
+About,Meet the facilitators,Internal Link,/website/resources/facilitators/
+Blog,Read the article,External Link,https://fierceinc.com/redefining-emotional-intelligence-beyond-traditional-methods/
+Blog,Load more posts,Button,JavaScript (not yet implemented)
+Contact,Talk to our team (card),Modal,contact-form
+Pulse,Download Pulse App,Placeholder,# (not yet linked)
+Pulse,Explore Pulse Governance,Placeholder,# (not yet linked)
